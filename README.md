@@ -28,11 +28,3 @@ npm run live
 ```
 
 4. Once your work completed, check your changes into GitHub, and execute the deployment action on GitHub.
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
-# sicherearbeit-aem-sites30
