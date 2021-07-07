@@ -1,8 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import '~normalize.css/normalize.css';
-@import './site/variables';
-@import './site/grid';
-@import './site/base';
+// Tailwindcss injects
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Custom scss
 @import './components/**/*.scss';
+@import './styles/**/*.scss';
