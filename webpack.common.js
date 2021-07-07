@@ -72,6 +72,7 @@ module.exports = {
                             options: {
                                 plugins() {
                                     return [
+                                        require('tailwindcss'),
                                         require('autoprefixer')
                                     ];
                                 }
