@@ -41,12 +41,6 @@
     }
   }
 
-  .cmp-contentfragment__container .cmp-contentfragment__content {
-    .cmp-contentfragment__title {
-      @apply mb-3/4;
-    }
-  }
-
   article.cmp-contentfragment {
     @apply mt-8;
 
@@ -72,7 +66,6 @@
   }
 
   .small .cmp-contentfragmentlist .cmp-contentfragment {
-    @apply mb-1/2;
 
     &:last-child {
       @apply m-0;
@@ -82,7 +75,7 @@
       @apply flex flex-row;
 
       .cmp-contentfragment__url .cmp-image__image {
-        @apply mr-1/2 flex-grow object-cover;
+        @apply flex-grow object-cover;
 
         width: 108px;
         max-width: 108px;
@@ -117,7 +110,7 @@
           @apply flex flex-row;
 
           .cmp-contentfragment__url .cmp-image__image {
-            @apply mr-1/2 flex-grow object-cover;
+            @apply flex-grow object-cover;
 
             width: 108px;
             max-width: 108px;
@@ -156,18 +149,10 @@
 
       .cmp-contentfragment_article-date {
         @apply flex items-center;
-
-        &::before {
-          @apply oegb-time-icon-before;
-        }
       }
 
       .cmp-contentfragment_author {
         @apply text-hero-story-meta order-1 ml-2;
-
-        &::before {
-          @apply oegb-author-icon-before;
-        }
       }
     }
 
