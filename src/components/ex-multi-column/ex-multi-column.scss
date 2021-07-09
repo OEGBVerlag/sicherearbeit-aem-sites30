@@ -1,0 +1,36 @@
+.ex-multicolumn-container {
+  @apply flex flex-row flex-wrap justify-between;
+
+  justify-items: center;
+
+  & > * {
+    @apply mb-default block w-full;
+  }
+}
+
+@screen sm {
+  .ex-multicolumn-container {
+    &--2cols,
+    &--4cols {
+      @apply w-1/2;
+    }
+
+    &--3cols {
+      @apply w-1/3;
+    }
+  }
+}
+
+@screen lg {
+  .ex-multicolumn-container {
+    @apply mb-default;
+
+    & > * {
+      @apply mb-0;
+    }
+
+    &--4cols {
+      @apply w-1/4;
+    }
+  }
+}

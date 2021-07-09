@@ -1,63 +1,16 @@
 //== Base
 
-@mixin fontface($name, $file, $weight: normal, $style: normal) {
-  @font-face {
-    font-weight: $weight;
-    font-family: '#{$name}';
-    font-style: $style;
-    src: url('../resources/fonts/#{$file}.ttf') format('truetype');
-  }
+html,
+body {
+  @apply font-body text-default leading-default p-0 m-0 font-normal;
 }
 
-@include fontface(defaultFont, 'SourceSansPro/SourceSansPro-Black', bolder) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-BlackItalic', bolder, italic) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-Bold', bolder) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-BoldItalic', bolder, italic) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-ExtraLight', lighter) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-ExtraLightItalic', lighter, italic) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-Italic', normal, italic) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-Light', lighter) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-LightItalic', lighter, italic) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-Regular', normal) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-SemiBold', bold) @include
-    fontface(defaultFont, 'SourceSansPro/SourceSansPro-SemiBoldItalic', bold, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Black', bolder) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-BlackItalic', bolder, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Bold', bolder) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-BoldItalic', bolder, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-ExtraLight', lighter) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-ExtraLightItalic', lighter, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Italic', normal, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Light', lighter) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-LightItalic', lighter, italic) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Regular', normal) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-SemiBold', bold) @include
-    fontface(titleFont, 'SourceSerifPro/SourceSerifPro-SemiBoldItalic', bold, italic) html,
-  body {
-  margin: 0;
-  color: $color-foreground;
-  font-size: $font-size;
-  font-family: defaultFont, serif;
-  line-height: $font-height;
-  background: $color-background;
+body {
+  @apply max-w-site w-full mx-auto my-0;
 }
 
-a {
-  color: $color-link;
-}
-
-p {
-  margin-block: 0.75rem;
-  line-height: 28px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-block: 0;
+* {
+  @apply box-border;
 }
 
 button,
@@ -68,16 +21,105 @@ textarea {
   font: inherit;
 }
 
-//== Grid
-
-// Default breakpoint
-.aem-Grid {
-  @include generate-grid(default, $max_col);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-default font-headline mt-6 font-semibold;
 }
 
-// Phone breakpoint
-@media (max-width: 768px) {
-  .aem-Grid {
-    @include generate-grid(phone, $max_col);
+h1 {
+  @apply text-h1;
+}
+
+h2 {
+  @apply text-h2;
+}
+
+h3 {
+  @apply text-h3;
+}
+
+h4 {
+  @apply text-h4;
+}
+
+h5 {
+  @apply text-h5;
+}
+
+h6 {
+  @apply text-h6;
+}
+
+@screen sm {
+  h1 {
+    @apply text-desktop-h1;
+  }
+
+  h2 {
+    @apply text-desktop-h2;
+  }
+
+  h3 {
+    @apply text-desktop-h3;
+  }
+
+  h4 {
+    @apply text-desktop-h4;
+  }
+
+  h5 {
+    @apply text-desktop-h5;
+  }
+
+  h6 {
+    @apply text-desktop-h6;
+  }
+}
+
+p {
+  @apply mt-default;
+
+  &:first-child {
+    @apply m-0;
+  }
+}
+
+::selection {
+  @apply bg-primary text-white;
+}
+
+.root > .cmp-container {
+  & > * {
+    @apply p-default;
+  }
+
+  & > main {
+    @apply px-default py-0;
+  }
+}
+
+.container {
+  @apply max-w-full;
+}
+
+.hide-mobile {
+  @apply hidden;
+}
+
+@screen sm {
+  .container {
+    @apply max-w-full;
+  }
+
+  .hide-mobile {
+    @apply block;
+  }
+
+  .hide-desktop {
+    @apply hidden;
   }
 }
