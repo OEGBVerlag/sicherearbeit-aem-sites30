@@ -32,7 +32,9 @@
         "optimize-css-assets-webpack-plugin": "^5.0.1",
         "postcss-loader": "^3.0.0",
         "sass-loader": "^7.1.0",
+        "prettier-plugin-tailwind-css": "^1.5.0",
         "tailwindcss": "^1.9.6",
+        "tailwindcss-pseudo-elements": "^1.5.1",
         "terser-webpack-plugin": "^1.4.1",
         "ts-loader": "^5.3.3",
         "tsconfig-paths-webpack-plugin": "^3.2.0",
@@ -48,5 +50,6 @@
     "browserslist": [
         "last 2 version",
         "> 1%"
-    ]
+    ],
+    "dependencies": {}
 }
