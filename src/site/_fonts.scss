@@ -16,16 +16,8 @@
 
 @font-face {
   font-family: 'Istok';
-  font-style: normal;
-  font-weight: 700;
+  font-style: bold;
+  font-weight: 600;
   src: local('IstokWeb Bold'), local('IstokWeb-Bold'), url('./resources/fonts/IstokWeb-Bold.ttf') format('truetype');
-  font-display: block;
-}
-
-@font-face {
-  font-family: 'Istok';
-  font-style: normal;
-  font-weight: 700;
-  src: local('IstokWeb Bold Italic'), local('IstokWeb-BoldItalic'), url('./resources/fonts/IstokWeb-BoldItalic.ttf') format('truetype');
   font-display: block;
 }
