@@ -106,7 +106,7 @@ module.exports = {
         4: '1rem',
       },
       maxWidth: {
-        site: '1252px',
+        site: '1500px',
         'narrow-site': '882px',
       },
       transitionProperty: {
