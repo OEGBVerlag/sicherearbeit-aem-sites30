@@ -1,0 +1,100 @@
+.ex-person {
+  @apply flex flex-row flex-wrap content-between flex-initial w-full pr-0 mb-10;
+
+  &_address,
+  &_mobile,
+  &_phone,
+  &_fax,
+  &_email,
+  &_url,
+  &_company,
+  &_function,
+  &_details {
+    @apply flex flex-row items-center;
+  }
+
+  &_media {
+    @apply w-full mr-0;
+
+    @screen sm {
+      @apply w-1/3;
+    }
+
+    img {
+      @apply max-w-full;
+    }
+  }
+
+  &_info {
+    @apply font-body text-gray-6 flex flex-col flex-wrap items-start w-full mt-4 font-light leading-5;
+
+    @screen sm {
+      @apply text-tiny w-2/3 pr-4 mt-0;
+    }
+  }
+
+  &_address {
+    @apply flex flex-row items-start;
+  }
+
+  &_position {
+    @apply text-gray-6 font-bold;
+  }
+
+  &_fullName {
+    @apply text-default text-gray-4 font-headline mb-2 font-semibold leading-5;
+  }
+
+  &_label {
+    @apply bg-no-repeat;
+    min-width: 1.5rem;
+  }
+
+  &_mobile,
+  &_phone,
+  &_email {
+    a {
+      @apply text-gray-6;
+    }
+  }
+
+  &_address {
+    .ex-person_label {
+      &::before {
+        content: 'A';
+      }
+    }
+  }
+
+  &_mobile,
+  &_phone {
+    .ex-person_label {
+      background-image: url(./resources/images/oegb-icon-person-telephone.svg);
+      width: 15px;
+      height: 12px;
+    }
+  }
+
+  &_email {
+    .ex-person_label {
+      background-image: url(./resources/images/oegb-icon-person-mail.svg);
+      width: 18px;
+      height: 12px;
+    }
+  }
+
+  &_details {
+    @apply text-s pt-3 mt-auto font-normal;
+  }
+
+  @screen sm {
+    @apply flex-no-wrap;
+
+    &_media {
+      @apply mr-5;
+    }
+  }
+  @screen md {
+    @apply w-1/2 pr-3;
+  }
+}

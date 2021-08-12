@@ -101,7 +101,7 @@ module.exports = {
     extend: {
       colors: {
         // brand color
-        primary: '#E20714',
+        primary: '#347ABF',
 
         // base colors
         white: '#ffffff',
