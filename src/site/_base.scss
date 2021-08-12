@@ -7,7 +7,6 @@ body {
 
 body {
   @apply relative w-full mx-auto;
-  top: 69px;
 
   & > .root > .cmp-container {
     @apply flex flex-col min-h-screen;
