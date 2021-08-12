@@ -2,15 +2,99 @@
 
 html,
 body {
-  @apply font-body text-default leading-default p-0 m-0 font-normal;
+  @apply font-body text-default bg-background p-0 m-0 overflow-x-hidden font-normal;
 }
 
 body {
-  @apply max-w-site w-full mx-auto my-0;
+  @apply relative w-full mx-auto;
+
+  & > .root > .cmp-container {
+    @apply flex flex-col min-h-screen;
+  }
 }
 
 * {
   @apply box-border;
+}
+
+header.experiencefragment,
+.container,
+footer.experiencefragment {
+  @apply px-5 py-0 mx-auto my-0;
+
+  @screen md {
+    @apply max-w-site px-4;
+  }
+}
+
+.container {
+  @screen md {
+    @apply mx-auto;
+  }
+
+  .full-width {
+    @apply relative;
+
+    width: 100vw !important;
+    left: 50%;
+    margin-left: -50vw;
+
+    .content-width {
+      @apply max-w-site px-4 mx-auto;
+    }
+  }
+
+  ul,
+  ol {
+    @apply text-s pb-6 ml-8;
+
+    @screen sm {
+      @apply text-default;
+    }
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  .article {
+    @screen md {
+      .cmp-article__element {
+        &--topic,
+        &--title,
+        &--subtitle,
+        &--author,
+        &--mainText {
+          .full-width {
+            left: -326px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1252px) {
+      .full-width {
+        left: 50%;
+        margin-left: -50vw;
+      }
+
+      .cmp-article__element {
+        &--topic,
+        &--title,
+        &--subtitle,
+        &--author,
+        &--mainText {
+          .full-width {
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
 }
 
 button,
@@ -21,67 +105,137 @@ textarea {
   font: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply mb-default font-headline mt-6 font-semibold;
+.cmp-separator,
+hr {
+  @apply border-gray-1;
 }
 
-h1 {
-  @apply text-h1;
+.separator {
+  @apply mt-component-spacing-small;
 }
 
-h2 {
-  @apply text-h2;
+h1.cmp-title__text,
+h2.cmp-title__text,
+h3.cmp-title__text,
+h4.cmp-title__text,
+h5.cmp-title__text,
+h6.cmp-title__text,
+.cmp-text h1,
+.cmp-text h2,
+.cmp-text h3,
+.cmp-text h4,
+.cmp-text h5,
+.cmp-text h6 {
+  @apply font-headline mt-6 mb-4 font-semibold;
+  hyphens: auto;
 }
 
-h3 {
-  @apply text-h3;
+.title {
+  h1.cmp-title__text {
+    @apply text-h1;
+  }
+
+  h2.cmp-title__text {
+    @apply text-h2;
+  }
+
+  h3.cmp-title__text {
+    @apply text-h3;
+  }
+
+  h4.cmp-title__text {
+    @apply text-h4;
+  }
+
+  h5.cmp-title__text {
+    @apply text-h5;
+  }
+
+  h6.cmp-title__text {
+    @apply text-h6;
+  }
+
+  @screen sm {
+    h1.cmp-title__text {
+      @apply text-desktop-h1;
+    }
+
+    h2.cmp-title__text {
+      @apply text-desktop-h2;
+    }
+
+    h3.cmp-title__text {
+      @apply text-desktop-h3;
+    }
+
+    h4.cmp-title__text {
+      @apply text-desktop-h4;
+    }
+
+    h5.cmp-title__text {
+      @apply text-desktop-h5;
+    }
+
+    h6.cmp-title__text {
+      @apply text-desktop-h6;
+    }
+  }
 }
 
-h4 {
-  @apply text-h4;
-}
-
-h5 {
-  @apply text-h5;
-}
-
-h6 {
-  @apply text-h6;
-}
-
-@screen sm {
+.cmp-text {
   h1 {
-    @apply text-desktop-h1;
+    @apply text-h1 text-primary;
   }
 
   h2 {
-    @apply text-desktop-h2;
+    @apply text-h2 text-primary;
   }
 
   h3 {
-    @apply text-desktop-h3;
+    @apply text-h3 text-primary;
   }
 
   h4 {
-    @apply text-desktop-h4;
+    @apply text-h4 text-primary;
   }
 
   h5 {
-    @apply text-desktop-h5;
+    @apply text-h5 text-primary;
   }
 
   h6 {
-    @apply text-desktop-h6;
+    @apply text-h6 text-primary;
+  }
+
+  @screen sm {
+    h1 {
+      @apply text-desktop-h1;
+    }
+
+    h2 {
+      @apply text-desktop-h2;
+    }
+
+    h3 {
+      @apply text-desktop-h3;
+    }
+
+    h4 {
+      @apply text-desktop-h4;
+    }
+
+    h5 {
+      @apply text-desktop-h5;
+    }
+
+    h6 {
+      @apply text-desktop-h6;
+    }
   }
 }
 
 p {
-  @apply mt-default;
+  @apply mt-4;
 
   &:first-child {
     @apply m-0;
@@ -90,16 +244,6 @@ p {
 
 ::selection {
   @apply bg-primary text-white;
-}
-
-.root > .cmp-container {
-  & > * {
-    @apply p-default;
-  }
-
-  & > main {
-    @apply px-default py-0;
-  }
 }
 
 .container {
