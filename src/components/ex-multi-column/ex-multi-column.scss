@@ -1,36 +1,83 @@
 .ex-multicolumn-container {
-  @apply flex flex-row flex-wrap justify-between;
+  @apply justify-items-center flex flex-row flex-wrap justify-between;
 
-  justify-items: center;
+  > * {
+    @apply block w-full;
 
-  & > * {
-    @apply mb-default block w-full;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
 
 @screen sm {
   .ex-multicolumn-container {
-    &--2cols,
-    &--4cols {
-      @apply w-1/2;
+    .cmp-container {
+      height: calc(100% - 1.5rem);
+    }
+
+    &--2cols {
+      @apply flex-auto;
+      max-width: calc(50% - 15px);
     }
 
     &--3cols {
-      @apply w-1/3;
-    }
-  }
-}
-
-@screen lg {
-  .ex-multicolumn-container {
-    @apply mb-default;
-
-    & > * {
-      @apply mb-0;
+      @apply flex-auto;
+      max-width: calc(33.333% - 20px);
     }
 
     &--4cols {
-      @apply w-1/4;
+      @apply flex-auto;
+      max-width: calc(25% - 22.5px);
+    }
+
+    // Divide the 30 px spacing between the containers so the smaller item has the same width as the
+    // corresponding pagelist item
+    .ex-multicolumn-container--2cols {
+      &.ratio--12 {
+        @apply flex-auto;
+        max-width: calc(33.333% - 20px);
+
+        &:last-child {
+          @apply flex-auto;
+          max-width: calc(66.666% - 10px);
+        }
+      }
+
+      &.ratio--21 {
+        @apply flex-auto;
+        max-width: calc(66.666% - 10px);
+
+        &:last-child {
+          @apply flex-auto;
+          max-width: calc(33.333% - 20px);
+        }
+      }
+
+      &.ratio--13 {
+        @apply flex-auto;
+        max-width: calc(25% - 22.5px);
+
+        &:last-child {
+          @apply flex-auto;
+          max-width: calc(75% - 7.5px);
+        }
+      }
+
+      &.ratio--31 {
+        @apply flex-auto;
+        max-width: calc(75% - 7.5px);
+
+        &:last-child {
+          @apply flex-auto;
+          max-width: calc(25% - 22.5px);
+        }
+      }
     }
   }
 }
