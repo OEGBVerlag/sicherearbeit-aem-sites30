@@ -246,19 +246,11 @@ p {
   @apply bg-primary text-white;
 }
 
-.container {
-  @apply max-w-full;
-}
-
 .hide-mobile {
   @apply hidden;
 }
 
 @screen sm {
-  .container {
-    @apply max-w-full;
-  }
-
   .hide-mobile {
     @apply block;
   }
