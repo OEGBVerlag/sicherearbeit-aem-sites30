@@ -88,7 +88,7 @@ module.exports = {
         'component-spacing-big': '6rem',
       },
       width: {
-        'max-site': '1252px',
+        'max-site': '1500px',
         '1/4': 'calc(25% - 20px)',
         '1/3': 'calc(33.33333333% - 16px)',
         '1/2': 'calc(50% - 16px)',
