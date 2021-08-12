@@ -19,9 +19,9 @@ module.exports = {
       lg: '1024px',
     },
     fontFamily: {
-      body: ['Nunito', 'sans-serif'],
-      headline: ['OpenSans', 'sans-serif'],
-      menu: ['OpenSans', 'sans-serif'],
+      body: ['Istok', 'sans-serif'],
+      headline: ['Istok', 'sans-serif'],
+      menu: ['Istok', 'sans-serif'],
     },
     fontSize: {
       xxxs: '10px',
@@ -67,7 +67,7 @@ module.exports = {
         white: '#ffffff',
         black: '#000000',
 
-        primary: '#AB0F1F',
+        primary: '#1F70BB',
         background: '#ffffff',
 
         gray: {
@@ -78,8 +78,8 @@ module.exports = {
         },
 
         //interactive
-        'interactive-state-hover-button': '#B10000',
-        'interactive-state-hover-link': '#920006',
+        'interactive-state-hover-button': '#1A18C7',
+        'interactive-state-hover-link': '#1A18C7',
       },
       spacing: {
         '1/2': '0.125rem',
@@ -117,13 +117,7 @@ module.exports = {
       },
       boxShadow: {
         component: '0 2px 6px rgba(0, 0, 0, 0.4)',
-      },
-      outline: {
-        none: '0px solid transparent',
-        primary: '2px solid #AB0F1F',
-        white: '2px solid #ffffff',
-        'interactive-state': '2px solid #B10000',
-      },
+      }
     },
   },
   variants: {
