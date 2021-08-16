@@ -64,26 +64,26 @@
 
   &_address {
     .ex-person_label {
+      @apply w-4 h-3;
+
       background-image: url(./resources/images/sicherearbeit-contact-address.svg);
-      width: 15px;
-      height: 12px;
     }
   }
 
   &_mobile,
   &_phone {
     .ex-person_label {
+      @apply w-4 h-3;
+      
       background-image: url(./resources/images/sicherearbeit-contact-phone.svg);
-      width: 15px;
-      height: 12px;
     }
   }
 
   &_email {
     .ex-person_label {
+      @apply w-5 h-3;
+
       background-image: url(./resources/images/sicherearbeit-contact-email.svg);
-      width: 18px;
-      height: 12px;
     }
   }
 
