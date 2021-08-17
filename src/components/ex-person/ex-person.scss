@@ -1,0 +1,105 @@
+.ex-person {
+  @apply mt-component-spacing-small flex flex-row flex-wrap content-between flex-initial w-full;
+
+  &_address,
+  &_mobile,
+  &_phone,
+  &_fax,
+  &_email,
+  &_url,
+  &_company,
+  &_function,
+  &_details {
+    @apply flex flex-row items-center;
+  }
+
+  &_media {
+    @apply w-full mr-0;
+
+    @screen sm {
+      @apply w-1/3;
+    }
+
+    img {
+      @apply max-w-full;
+    }
+  }
+
+  &_info {
+    @apply font-body text-gray-1 flex flex-col flex-wrap items-start w-full mt-4 font-light leading-5;
+
+    @screen sm {
+      @apply text-s w-2/3 pr-4 mt-0;
+    }
+  }
+
+  &_address {
+    @apply flex flex-row;
+  }
+
+  &_position {
+    @apply text-gray-1 font-bold;
+  }
+
+  &_fullName {
+    @apply text-default text-gray-0 font-headline mb-2 font-semibold leading-5;
+  }
+
+  &_label {
+    @apply bg-no-repeat;
+    min-width: 1.5rem;
+  }
+
+  &_mobile,
+  &_phone,
+  &_email,
+  &_url {
+    a {
+      @apply text-gray-1 break-all;
+      &:hover {
+        @apply text-black;
+      }
+    }
+  }
+
+  &_address {
+    .ex-person_label {
+      @apply w-4 h-3;
+
+      background-image: url(./resources/images/sicherearbeit-contact-address.svg);
+    }
+  }
+
+  &_mobile,
+  &_phone {
+    .ex-person_label {
+      @apply w-4 h-3;
+      
+      background-image: url(./resources/images/sicherearbeit-contact-phone.svg);
+    }
+  }
+
+  &_email {
+    .ex-person_label {
+      @apply w-5 h-3;
+
+      background-image: url(./resources/images/sicherearbeit-contact-email.svg);
+    }
+  }
+
+  &_details {
+    @apply text-s pt-3 mt-auto font-normal;
+  }
+
+  @screen sm {
+    @apply flex-no-wrap;
+
+    &_media {
+      @apply mr-5;
+    }
+  }
+
+  @screen md {
+    @apply w-1/2;
+  }
+}
