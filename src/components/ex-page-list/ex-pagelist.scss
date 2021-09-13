@@ -105,9 +105,7 @@ $itemSpacing: 30px;
     }
 
     &__meta-data {
-      @apply font-headline text-gray-0 text-s mt-0 mb-1 font-light uppercase;
-
-      letter-spacing: 0.3rem;
+      @apply font-headline text-gray-0 tracking-default mt-0 mb-1 text-xs font-light uppercase;
 
       a {
         @apply text-gray-0;
@@ -127,6 +125,16 @@ $itemSpacing: 30px;
         &:hover {
           @apply no-underline;
         }
+
+        &:after {
+          @apply mt-4 underline;
+
+          content: 'Weiterlesen';
+
+          &:hover {
+            @apply text-gray-0 no-underline;
+          }
+        }
       }
 
       .pagelist-contentfragment__url {
@@ -135,7 +143,7 @@ $itemSpacing: 30px;
     }
 
     &__title {
-      @apply text-primary text-xl font-headline mb-2 font-bold leading-tight break-words;
+      @apply text-primary font-headline mb-2 text-xl font-bold leading-tight break-words;
 
       hyphens: auto;
 
@@ -149,11 +157,7 @@ $itemSpacing: 30px;
     }
 
     &__footer {
-      @apply flex flex-row-reverse text-s leading-tight;
-
-      @screen sm {
-        @apply mb-2;
-      }
+      @apply flex flex-row-reverse justify-end my-2 text-xs leading-tight;
     }
 
     &_article-date {
@@ -161,13 +165,13 @@ $itemSpacing: 30px;
     }
 
     &_author {
-      @apply uppercase text-black font-semibold inline-flex content-center;
+      @apply tracking-default inline-flex content-center font-semibold text-black uppercase;
 
       &:not(:first-child) {
         &:after {
-          @apply mx-2 border-r-2 border-black border-solid inline-block h-full;
+          @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
 
-          content: "";
+          content: '';
         }
       }
     }
