@@ -1,0 +1,175 @@
+// Defines the spacing between the page list items
+// Applied as margin right for each item that is not the last in its row
+$itemSpacing: 30px;
+
+.pagelist {
+  &-contentfragmentlist {
+    &__item {
+      @apply mt-component-spacing-small top-0 right-0;
+
+      &--list {
+        @apply w-full;
+      }
+    }
+
+    @screen sm {
+      @apply flex flex-wrap;
+
+      &.one-column {
+        .pagelist-contentfragmentlist {
+          &__item {
+            @apply w-full;
+          }
+        }
+      }
+
+      &.two-column,
+      &.four-column {
+        .pagelist-contentfragmentlist__item {
+          @apply w-table-1/2;
+          margin-right: $itemSpacing;
+
+          &:nth-of-type(2n) {
+            @apply mr-0;
+          }
+        }
+      }
+
+      &.three-column {
+        .pagelist-contentfragmentlist__item {
+          @apply w-table-1/3;
+          margin-right: $itemSpacing;
+
+          &:nth-of-type(3n) {
+            @apply mr-0;
+          }
+        }
+      }
+    }
+
+    @screen md {
+      &.four-column {
+        .pagelist-contentfragmentlist__item {
+          @apply w-table-1/4;
+          margin-right: $itemSpacing;
+
+          &:nth-of-type(2n) {
+            margin-right: $itemSpacing;
+          }
+
+          &:nth-of-type(4n) {
+            @apply mr-0;
+          }
+
+          .pagelist-contentfragment {
+            &__title {
+              @apply text-xl;
+            }
+
+            &__meta-data {
+              @apply text-xs;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-contentfragment {
+    @apply h-full;
+    &__container {
+      @apply flex flex-col h-full p-0;
+    }
+
+    .cmp-image {
+      @apply h-full;
+    }
+
+    &__url {
+      @apply no-underline;
+
+      &:hover {
+        @apply no-underline;
+      }
+    }
+
+    &__image {
+      @apply mb-1;
+      img {
+        @apply object-cover w-full h-full;
+      }
+
+      @screen sm {
+        @apply mb-2;
+      }
+    }
+
+    &__meta-data {
+      @apply font-headline text-gray-0 text-s mt-0 mb-1 font-light uppercase;
+
+      letter-spacing: 0.3rem;
+
+      a {
+        @apply text-gray-0;
+      }
+
+      &__seperator {
+        @apply mx-1;
+      }
+    }
+
+    &__content {
+      @apply flex-grow;
+
+      > a {
+        @apply no-underline;
+
+        &:hover {
+          @apply no-underline;
+        }
+      }
+
+      .pagelist-contentfragment__url {
+        @apply flex flex-col;
+      }
+    }
+
+    &__title {
+      @apply text-primary text-xl font-headline mb-2 font-bold leading-tight break-words;
+
+      hyphens: auto;
+
+      &:hover {
+        @apply text-interactive-state-hover-link underline;
+      }
+    }
+
+    &__previewText {
+      @apply text-gray-0 font-headline text-default mb-2 font-normal leading-tight;
+    }
+
+    &__footer {
+      @apply flex flex-row-reverse text-s leading-tight;
+
+      @screen sm {
+        @apply mb-2;
+      }
+    }
+
+    &_article-date {
+      @apply flex items-center;
+    }
+
+    &_author {
+      @apply uppercase text-black font-semibold inline-flex content-center;
+
+      &:not(:first-child) {
+        &:after {
+          @apply mx-2 border-r-2 border-black border-solid inline-block h-full;
+
+          content: "";
+        }
+      }
+    }
+  }
+}
