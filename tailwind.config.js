@@ -115,8 +115,8 @@ module.exports = {
       zIndex: {
         100: '100',
       },
-      boxShadow: {
-        component: '0 2px 6px rgba(0, 0, 0, 0.4)',
+      letterSpacing: {
+        default: '0.25rem'
       }
     },
   },
