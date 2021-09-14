@@ -18,7 +18,7 @@ body {
 }
 
 header.experiencefragment,
-.container,
+main.container,
 footer.experiencefragment {
   @apply px-5 py-0 mx-auto my-0;
 
@@ -28,6 +28,8 @@ footer.experiencefragment {
 }
 
 .container {
+  @apply max-w-full;
+
   @screen md {
     @apply mx-auto;
   }
