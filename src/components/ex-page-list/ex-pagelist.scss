@@ -134,12 +134,6 @@ $itemSpacing: 30px;
         &:hover {
           @apply no-underline;
         }
-
-        &:after {
-          @apply text-gray-0 mt-4 underline;
-
-          content: 'Weiterlesen';
-        }
       }
 
       .pagelist-contentfragment__url {
