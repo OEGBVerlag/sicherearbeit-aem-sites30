@@ -14,6 +14,8 @@
         "live": "npm-run-all -p watch proxy browser-sync"
     },
     "devDependencies": {
+        "@types/react": "^17.0.3",
+        "@types/react-dom": "^17.0.2",
         "@adobe/aem-site-theme-builder": "4.0.1",
         "autoprefixer": "^9.2.1",
         "bestzip": "^2.1.6",
@@ -33,6 +35,9 @@
         "postcss-loader": "^3.0.0",
         "sass-loader": "^7.1.0",
         "prettier-plugin-tailwind-css": "^1.5.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-is": "^17.0.1",
         "tailwindcss": "^1.9.6",
         "tailwindcss-pseudo-elements": "^1.5.1",
         "terser-webpack-plugin": "^1.4.1",
