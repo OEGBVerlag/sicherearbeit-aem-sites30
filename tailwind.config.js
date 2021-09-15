@@ -65,7 +65,7 @@ module.exports = {
     extend: {
       colors: {
         white: '#ffffff',
-        black: '#000000',
+        black: '#080808',
 
         primary: '#1F70BB',
         background: '#ffffff',
@@ -78,8 +78,8 @@ module.exports = {
         },
 
         //interactive
-        'interactive-state-hover-button': '#1A18C7',
-        'interactive-state-hover-link': '#1A18C7',
+        'interactive-state-hover-button': '#10385e',
+        'interactive-state-hover-link': '#10385e',
       },
       spacing: {
         '1/2': '0.125rem',
