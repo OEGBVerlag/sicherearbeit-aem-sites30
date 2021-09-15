@@ -116,7 +116,7 @@ module.exports = {
         100: '100',
       },
       letterSpacing: {
-        default: '0.25rem',
+        default: '0.125rem',
       },
     },
   },
