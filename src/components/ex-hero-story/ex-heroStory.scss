@@ -75,12 +75,9 @@
     @apply font-headline tracking-default flex items-center mt-0 mb-1 text-xs font-light leading-none text-black uppercase;
 
     &:before {
-      @apply inline-block mr-2 bg-cover;
+      @apply inline-block mr-1;
 
-      content: '';
-      width: 10px;
-      height: 10px;
-      background-image: url('../resources/images/sicherearbeit-arrow-right.svg');
+      content: '\25BA';
     }
   }
 
