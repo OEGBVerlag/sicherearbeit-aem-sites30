@@ -1,137 +1,29 @@
-.ex-navigation {
-  @apply overscroll-contain overflow-y-auto bg-white;
-  max-height: calc(100vh - 215px);
-
-  .ex-navigation__list--navigationitems {
-    @apply flex flex-col justify-between font-semibold uppercase bg-white;
-
-    .ex-navigation__item {
-      @apply font-menu text-s font-semibold leading-5 text-left cursor-pointer select-none;
-    }
-
-    .ex-navigation__item-wrapper {
-      @apply flex items-center px-10 py-4;
-
-      .ex-navigation__icon {
-        @apply flex-initial text-left;
-        min-width: 0.9rem;
-
-        svg {
-          @apply inline-block align-baseline;
-          transition: 0.2s transform;
-
-          path {
-            @apply stroke-current;
-          }
-        }
-
-        &--active {
-          svg {
-            @apply transform rotate-90;
-          }
-        }
+.navigation {
+  .ex-navigation {
+    &__list {
+      &--hottopicitems,
+      &--topicitems {
+        @apply hidden;
       }
 
-      .ex-navigation__link {
-        @apply text-gray-1 flex-initial underline break-words;
-        hyphens: auto;
-
-        &:hover {
-          @apply text-black;
-        }
+      &--navigationitems {
+        @apply flex justify-start pb-0 ml-0;
       }
     }
 
-    .ex-navigation__item--active > .ex-navigation__item-wrapper > .ex-navigation__link {
-      @apply text-headline-red;
+    &__item {
+      @apply flex;
     }
 
-    .ex-navigation__list--level1 {
-      @apply bg-background-dark pl-3;
-
-      .ex-navigation__list--level2 {
-        @apply pl-6 mr-6 bg-white;
-      }
+    &__icon {
+      @apply hidden;
     }
-  }
 
-  @screen md {
-    @apply overscroll-auto px-0 overflow-y-visible;
+    &__link {
+      @apply text-s bg-primary inline-block px-2 pt-1 pb-0 mr-8 text-white uppercase list-none transition-all duration-300 ease-in-out;
 
-    background-color: inherit;
-    flex-grow: 2;
-
-    .ex-navigation__list--navigationitems {
-      @apply z-100 justify-evenly flex flex-row ml-0 font-normal normal-case list-none;
-      background: inherit;
-      height: 42px;
-
-      .ex-navigation__item {
-        @apply pb-0 font-normal;
-      }
-
-      .ex-navigation__item-wrapper {
-        @apply px-0 py-0;
-        min-height: 2.5rem;
-      }
-
-      .ex-navigation__link {
-        @apply text-gray-0 flex-initial;
-      }
-
-      .ex-navigation__item--level0 {
-        @apply flex items-center px-4;
-
-        > .ex-navigation__item-wrapper .ex-navigation__icon:empty {
-          @apply hidden;
-        }
-
-        .ex-navigation__list--level1 {
-          @apply bg-background-dark gap-x-2 fixed left-0 grid justify-center grid-flow-col pt-4 pb-6 pl-2 pr-10;
-
-          grid-template-rows: repeat(6, auto);
-          grid-auto-columns: 13rem;
-          box-shadow: 0 5px 15px -10px #000000;
-          top: 5.5rem;
-          //Width: site width + 100 extra pixels to make the navigation bigger than the content width
-          width: 1352px;
-          max-width: 100vw;
-          left: 50%;
-          transform: translateX(-50%);
-
-          .ex-navigation__item--level1 {
-            @apply pt-2 pl-2;
-          }
-
-          .ex-navigation__list--level2 {
-            @apply pb-4 pl-4 mr-0 bg-white;
-
-            .ex-navigation__item--level2 {
-              &:not(:first-child) {
-                @apply mt-2;
-              }
-
-              .ex-navigation__item-wrapper {
-                @apply min-h-0;
-              }
-            }
-          }
-        }
-      }
-      .ex-navigation__item--active > .ex-navigation__item-wrapper > .ex-navigation__link {
-        @apply text-black;
-      }
-      .ex-navigation__item--level0 {
-        &.ex-navigation__item--active {
-          @apply bg-background-dark;
-        }
-      }
-      .ex-navigation__item--level1 {
-        &.ex-navigation__item {
-          &--active {
-            @apply bg-white;
-          }
-        }
+      &:hover {
+        @apply bg-interactive-state-hover-button;
       }
     }
   }

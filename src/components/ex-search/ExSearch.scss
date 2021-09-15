@@ -1,0 +1,40 @@
+.ex-search {
+  @apply border-primary relative flex justify-end border-solid;
+
+  border-right-width: 2rem;
+
+  @screen md {
+    @apply relative;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__icon-close,
+  &__icon-search {
+    @apply absolute cursor-pointer;
+
+    right: -1.5rem;
+    top: 0.5rem;
+    filter: brightness(255);
+  }
+
+  &__form {
+    @apply flex w-full overflow-hidden;
+  }
+
+  &__input {
+    @apply text-s bg-background border-primary w-full h-8 px-3 mt-0 mb-0 border-2 border-solid outline-none;
+
+    &--hidden {
+      @apply w-0;
+    }
+
+    &::placeholder {
+      @apply italic;
+    }
+  }
+}
+
+.search {
+  width: 400px !important;
+}

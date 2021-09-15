@@ -1,0 +1,28 @@
+//== XF Header style, used on page template
+
+header.experiencefragment {
+  .cmp-container {
+    .aem-Grid {
+      @apply flex justify-between;
+
+      &:before,
+      &:after {
+        content: unset;
+      }
+    }
+  }
+
+  @screen md {
+    @apply w-full;
+
+    padding-top: 21vw;
+  }
+
+  .image {
+    @screen md {
+      @apply absolute top-0 left-0 p-2 pb-0;
+
+      width: 100vw;
+    }
+  }
+}
