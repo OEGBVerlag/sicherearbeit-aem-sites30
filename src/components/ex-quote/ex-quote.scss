@@ -1,0 +1,57 @@
+body .quote blockquote.quote-component,
+blockquote {
+  @apply bg-primary py-10 mx-auto my-6;
+
+  .quote__content {
+    @apply text-center;
+
+    .quote {
+      &__text,
+      &__author,
+      &__source {
+        @apply text-center;
+      }
+
+      &__text {
+        @apply inline-block px-4 pb-3 mb-3 border-b-2 border-white border-solid;
+      }
+
+      &__text p {
+        @apply text-l italic font-light leading-6 text-white;
+
+        @screen sm {
+          @apply text-xxl leading-10;
+        }
+
+        &:before {
+          @apply mr-1;
+
+          content: '\00bb';
+        }
+
+        &:after {
+          @apply ml-1;
+
+          content: '\00ab';
+        }
+      }
+
+      &__author {
+        @apply text-default relative m-1 font-bold leading-5 text-white;
+        &::before {
+          content: '';
+        }
+
+        &:not(:last-child) {
+          &::after {
+            content: ',';
+          }
+        }
+      }
+
+      &__source {
+        @apply text-default relative m-1 not-italic font-normal leading-5 text-white;
+      }
+    }
+  }
+}
