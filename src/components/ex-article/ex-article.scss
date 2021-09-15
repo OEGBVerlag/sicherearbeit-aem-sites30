@@ -11,12 +11,24 @@
     h4,
     h5,
     h6 {
-      @apply pt-4 font-bold leading-8;
+      @apply text-primary pt-4 font-bold leading-8;
       scroll-margin-top: 100px;
 
       @screen md {
         @apply pt-8;
       }
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+
+    h3 {
+      @apply text-m;
+    }
+
+    h4 {
+      @apply text-default;
     }
 
     .cmp-title__text {
@@ -25,6 +37,8 @@
 
     .cmp-article__element {
       &--image {
+        @apply mt-5;
+
         .cmp-image {
           @apply relative;
         }
@@ -46,53 +60,30 @@
       }
 
       &--topic {
-        @apply font-headline pt-8 text-xs font-bold text-black uppercase; /*tracking-default*/
+        @apply font-headline tracking-default text-s flex items-center mt-0 mb-1 font-light leading-none text-black uppercase;
 
-        @screen sm {
-          @apply text-default pt-12 leading-7;
+        &:before {
+          @apply inline-block mr-1;
+
+          content: '\25BA';
         }
       }
 
       &--title {
-        &:first-child,
-        &:nth-child(2),
-        &:nth-child(4) {
-          @apply pt-8;
-
-          @screen sm {
-            @apply pt-12;
-          }
-        }
+        @apply mt-3;
 
         h1 {
-          @apply text-xxl font-headline text-primary font-light leading-8 uppercase break-words;
+          @apply text-xxl font-headline text-primary font-bold leading-8 break-words;
           hyphens: auto;
-
-          @screen sm {
-            @apply text-xxxxl;
-            line-height: 75px;
-          }
         }
       }
 
       &--subtitle,
-      &--previewText,
-      &--mainText,
-      &--articleDate,
-      &--source,
-      &--author {
-        .cmp-article__paragraphs > p {
-          @apply font-body text-s pt-4 m-0;
-          @screen sm {
-            @apply text-default pt-8;
-          }
-        }
-      }
+      &--previewText {
+        @apply font-body py-4;
 
-      &--subtitle {
-        @apply text-s font-body pt-2 font-bold leading-6;
-        @screen sm {
-          @apply leading-8;
+        p:first-child {
+          @apply mt-0;
         }
       }
 
@@ -107,22 +98,33 @@
       }
 
       &--author {
-        @apply pt-8 pb-4;
+        @apply text-s;
 
         .ex-article-meta {
+          &_info {
+            @apply flex;
+          }
+
           &_author-image {
+            @apply hidden;
           }
 
           &_author-name {
+            @apply tracking-default inline-flex content-center font-semibold text-black uppercase;
           }
 
           &_article-date {
+            @apply inline-flex content-center;
+
+            &:not(:first-child) {
+              &:before {
+                @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
+
+                content: '';
+              }
+            }
           }
         }
-      }
-
-      .cmp-tabs {
-        @apply mt-0;
       }
 
       .cmp-embed--youtube {
@@ -131,119 +133,6 @@
 
         iframe {
           @apply absolute top-0 left-0 w-full h-full border-none;
-        }
-      }
-
-      // add padding and borders to the added components inside the cmp-article__element when they are not placed inside accordions
-      :not(.cmp-accordion__panel) {
-        > .accordion,
-        > .download,
-        > .downloadlist,
-        > .linklist,
-        > .quote,
-        > .tabs {
-          @apply my-component-spacing-small;
-        }
-
-        > .download {
-          @apply pb-6;
-        }
-
-        > .download,
-        > .downloadlist,
-        > .linklist {
-          @apply pt-6;
-        }
-      }
-
-      // add padding left and right to avoid icons / images to stick to the side
-      .download,
-      .downloadlist,
-      .linklist,
-      .cmp-text {
-        @apply px-8;
-      }
-
-      // remove padding and border if the download is rendered inside the download list
-      .downloadlist__element > .download {
-        @apply px-0 py-0 mx-0 border-none;
-      }
-
-      .quote__content {
-        @screen sm {
-          @apply px-8;
-        }
-      }
-
-      // change background color of quote share buttons
-      .ex-quote-share-buttons__btn {
-        @apply bg-background;
-        &:hover {
-          @apply bg-gray-3;
-        }
-      }
-
-      &--topic,
-      &--title,
-      &--subtitle,
-      &--author,
-      &--previewText,
-      &--articleDate,
-      &--source,
-      .cmp-article__paragraphs > h2,
-      .cmp-article__paragraphs > h3,
-      .cmp-article__paragraphs > h4,
-      .cmp-article__paragraphs > h5,
-      .cmp-article__paragraphs > h6,
-      .cmp-article__paragraphs > p,
-      .cmp-article__paragraphs > ul,
-      .cmp-article__paragraphs > ol,
-      .cmp-article__paragraphs > blockquote,
-      .cmp-article__paragraphs > div,
-      .cmp-article__paragraphs > hr {
-        @screen md {
-          // margin-left: 196px;
-          // margin-right: 138px;
-        }
-      }
-
-      .cmp-article__paragraphs {
-        > ul,
-        > ol {
-          @apply pb-0;
-
-          ul,
-          ol {
-            @apply pb-0;
-          }
-        }
-      }
-
-      @screen md {
-        &--topic,
-        &--title {
-          @apply pl-8 pr-5;
-        }
-
-        .cmp-article__paragraphs > h2,
-        .cmp-article__paragraphs > h3,
-        .cmp-article__paragraphs > h4,
-        .cmp-article__paragraphs > h5,
-        .cmp-article__paragraphs > h6,
-        .cmp-article__paragraphs > p,
-        .cmp-article__paragraphs > blockquote,
-        .personlist,
-        &--subtitle,
-        &--author,
-        &--previewText,
-        &--articleDate,
-        &--source {
-          @apply px-8;
-        }
-
-        .cmp-article__paragraphs > ul,
-        .cmp-article__paragraphs > ol {
-          @apply pl-16 pr-8;
         }
       }
     }

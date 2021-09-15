@@ -238,10 +238,6 @@ h6.cmp-title__text,
 
 p {
   @apply mt-4;
-
-  &:first-child {
-    @apply m-0;
-  }
 }
 
 ::selection {
