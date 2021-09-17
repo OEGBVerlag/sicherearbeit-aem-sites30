@@ -110,7 +110,7 @@
 
         .ex-article-meta {
           &_info {
-            @apply flex;
+            @apply flex flex-wrap;
           }
 
           &_author-image {
@@ -118,17 +118,25 @@
           }
 
           &_author-name {
-            @apply tracking-default inline-flex content-center font-semibold text-black uppercase;
+            @apply tracking-default inline-flex content-center w-full font-semibold text-black uppercase;
+
+            @screen md {
+              width: unset;
+            }
           }
 
           &_article-date {
-            @apply inline-flex content-center;
+            @apply inline-flex content-center w-full mt-1;
 
-            &:not(:first-child) {
-              &:before {
-                @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
+            @screen md {
+              width: unset;
 
-                content: '';
+              &:not(:first-child) {
+                &:before {
+                  @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
+
+                  content: '';
+                }
               }
             }
           }
