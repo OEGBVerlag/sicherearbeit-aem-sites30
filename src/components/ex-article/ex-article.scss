@@ -5,6 +5,10 @@
     @apply mt-1;
   }
 
+  a {
+    @apply text-black;
+  }
+
   &__elements {
     @screen md {
       @apply p-0 m-0;
