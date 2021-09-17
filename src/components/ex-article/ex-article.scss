@@ -129,6 +129,8 @@
             @apply inline-flex content-center w-full mt-1;
 
             @screen md {
+              @apply mt-0;
+
               width: unset;
 
               &:not(:first-child) {
