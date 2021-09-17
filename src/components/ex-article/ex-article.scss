@@ -1,6 +1,10 @@
 .cmp-article {
   @apply flex flex-col;
 
+  p {
+    @apply mt-1;
+  }
+
   &__elements {
     @screen md {
       @apply p-0 m-0;
@@ -11,7 +15,7 @@
     h4,
     h5,
     h6 {
-      @apply text-primary pt-4 font-bold leading-8;
+      @apply text-primary pt-3 font-semibold leading-8;
       scroll-margin-top: 100px;
 
       @screen md {
@@ -37,7 +41,7 @@
 
     .cmp-article__element {
       &--image {
-        @apply mt-5;
+        @apply mt-5 mb-2;
 
         .cmp-image {
           @apply relative;
