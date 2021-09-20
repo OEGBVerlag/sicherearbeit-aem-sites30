@@ -1,0 +1,29 @@
+.title {
+  .cmp-title {
+    scroll-margin-top: 100px;
+
+    &__text,
+    &__link {
+      @apply text-primary text-l font-headline mb-0 font-light;
+
+      hyphens: auto;
+    }
+
+    &__link {
+      &__text {
+        &:hover {
+          @apply text-interactive-state-hover-link underline;
+        }
+      }
+    }
+  }
+
+  &--black {
+    .cmp-title {
+      &__text,
+      &__link {
+        @apply text-gray-0;
+      }
+    }
+  }
+}
