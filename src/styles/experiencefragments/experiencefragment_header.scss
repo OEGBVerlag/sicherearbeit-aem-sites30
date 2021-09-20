@@ -1,9 +1,11 @@
 //== XF Header style, used on page template
 
 header.experiencefragment {
+  @apply w-full;
+
   .cmp-container {
     .aem-Grid {
-      @apply flex justify-between;
+      @apply flex flex-wrap items-center justify-between;
 
       &:before,
       &:after {
@@ -14,15 +16,19 @@ header.experiencefragment {
 
   @screen md {
     @apply w-full;
-
-    padding-top: 21vw;
+    padding-top: 18vw;
   }
 
   .image {
-    @screen md {
-      @apply absolute top-0 left-0 p-2 pb-0;
+    img {
+      @apply max-w-none relative p-2 mb-3;
 
-      width: 100vw;
+      left: -1.25rem;
+      width: 100vw !important;
+
+      @screen md {
+        @apply absolute top-0 left-0 p-5 m-0;
+      }
     }
   }
 }

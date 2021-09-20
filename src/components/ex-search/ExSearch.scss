@@ -36,5 +36,9 @@
 }
 
 .search {
-  width: 400px !important;
+  width: 70% !important;
+
+  @screen md {
+    width: 400px !important;
+  }
 }
