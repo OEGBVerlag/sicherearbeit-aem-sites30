@@ -19,7 +19,7 @@ body {
 
 header.experiencefragment,
 main.container,
-footer.experiencefragment {
+footer.experiencefragment .cmp-container {
   @apply px-5 py-0 mx-auto my-0;
 
   @screen md {
