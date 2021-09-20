@@ -1,0 +1,48 @@
+//== XF Footer style
+
+footer.experiencefragment {
+  @apply bg-primary mt-5 text-left;
+
+  @screen md {
+    @apply mt-10;
+  }
+
+  .cmp-container {
+    @apply pt-16 pb-4 bg-no-repeat;
+
+    background-image: url('../resources/images/sicherearbeit-footer-logo.svg');
+    background-size: 150px;
+    background-position: calc(100% - 1.25rem) -1px, right top;
+
+    @screen md {
+      @apply pb-16 bg-right-top;
+
+      background-size: 200px;
+    }
+  }
+
+  ul {
+    @apply flex flex-wrap m-0 list-none;
+  }
+
+  li {
+    @apply w-full pb-0 mb-2 text-white;
+
+    @screen sm {
+      @apply pr-2 mb-0 mr-2 border-r border-white border-solid;
+
+      width: unset;
+
+      &:last-child {
+        @apply border-none;
+      }
+    }
+  }
+  a {
+    @apply font-light text-white;
+
+    &:hover {
+      @apply text-white underline;
+    }
+  }
+}

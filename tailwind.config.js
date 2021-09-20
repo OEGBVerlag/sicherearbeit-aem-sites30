@@ -38,16 +38,16 @@ module.exports = {
       xxxxxl: '90px',
 
       // Header sizes
-      h1: '50px',
-      h2: '42px',
-      h3: '30px',
-      h4: '24px',
+      h1: '37px',
+      h2: '30px',
+      h3: '25px',
+      h4: '22px',
       h5: '20px',
       h6: '16px',
-      'desktop-h1': '90px',
-      'desktop-h2': '70px',
-      'desktop-h3': '38px',
-      'desktop-h4': '28px',
+      'desktop-h1': '37px',
+      'desktop-h2': '30px',
+      'desktop-h3': '25px',
+      'desktop-h4': '22px',
       'desktop-h5': '20px',
       'desktop-h6': '16px',
     },
@@ -65,7 +65,7 @@ module.exports = {
     extend: {
       colors: {
         white: '#ffffff',
-        black: '#000000',
+        black: '#080808',
 
         primary: '#007EC5',
         background: '#ffffff',
@@ -78,8 +78,8 @@ module.exports = {
         },
 
         //interactive
-        'interactive-state-hover-button': '#1A18C7',
-        'interactive-state-hover-link': '#1A18C7',
+        'interactive-state-hover-button': '#10385e',
+        'interactive-state-hover-link': '#10385e',
       },
       spacing: {
         '1/2': '0.125rem',
