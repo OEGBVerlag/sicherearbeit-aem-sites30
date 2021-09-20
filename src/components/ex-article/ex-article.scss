@@ -1,0 +1,158 @@
+.cmp-article {
+  @apply flex flex-col;
+
+  p {
+    @apply mt-1;
+  }
+
+  a {
+    @apply text-black;
+  }
+
+  &__elements {
+    @screen md {
+      @apply p-0 m-0;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-primary pt-3 font-semibold leading-8;
+      scroll-margin-top: 100px;
+
+      @screen md {
+        @apply pt-8;
+      }
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+
+    h3 {
+      @apply text-m;
+    }
+
+    h4 {
+      @apply text-default;
+    }
+
+    .cmp-title__text {
+      @apply mt-0 leading-tight;
+    }
+
+    .cmp-article__element {
+      &--image {
+        @apply mt-5 mb-2;
+
+        .cmp-image {
+          @apply relative;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+          &.cmp-article__element--empty ~ .cmp-article__element--title {
+            @apply pt-8;
+
+            @screen sm {
+              @apply pt-12;
+            }
+          }
+        }
+
+        img {
+          @apply object-cover w-full p-0;
+        }
+      }
+
+      &--topic {
+        @apply font-headline tracking-default text-s flex items-center mt-0 mb-1 font-light leading-none text-black uppercase;
+
+        &:before {
+          @apply inline-block mr-1;
+
+          content: '\25BA';
+        }
+      }
+
+      &--title {
+        @apply mt-3;
+
+        h1 {
+          @apply text-xxl font-headline text-primary font-bold leading-8 break-words;
+          hyphens: auto;
+        }
+      }
+
+      &--subtitle,
+      &--previewText {
+        @apply font-body py-4;
+
+        p:first-child {
+          @apply mt-0;
+        }
+      }
+
+      &--mainText {
+        @screen sm {
+          @apply leading-8;
+        }
+      }
+
+      &--articleDate {
+        @apply pt-10 text-xs italic leading-7;
+      }
+
+      &--author {
+        @apply text-s;
+
+        .ex-article-meta {
+          &_info {
+            @apply flex flex-wrap;
+          }
+
+          &_author-image {
+            @apply hidden;
+          }
+
+          &_author-name {
+            @apply tracking-default inline-flex content-center w-full font-semibold text-black uppercase;
+
+            @screen md {
+              width: unset;
+            }
+          }
+
+          &_article-date {
+            @apply inline-flex content-center w-full mt-1;
+
+            @screen md {
+              @apply mt-0;
+
+              width: unset;
+
+              &:not(:first-child) {
+                &:before {
+                  @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
+
+                  content: '';
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cmp-embed--youtube {
+        @apply relative w-full;
+        padding-bottom: 56.25%;
+
+        iframe {
+          @apply absolute top-0 left-0 w-full h-full border-none;
+        }
+      }
+    }
+  }
+}

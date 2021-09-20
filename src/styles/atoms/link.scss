@@ -1,0 +1,15 @@
+a {
+  @apply text-primary underline;
+
+  &:focus {
+    @apply underline;
+  }
+
+  &:hover {
+    @apply text-interactive-state-hover-link underline;
+  }
+
+  &:active {
+    @apply text-interactive-state-hover-link;
+  }
+}
