@@ -1,0 +1,77 @@
+.download {
+  @apply mt-component-spacing-small w-full;
+
+  &__no-title {
+    @apply flex items-center px-4 py-3 font-bold text-white;
+    background-color: rgba(65, 131, 215, 1);
+
+    &:before {
+      @apply mr-2;
+      content: '\26A0';
+    }
+  }
+
+  &_item {
+    @apply flex flex-col w-full px-4 py-2;
+
+    background: #f5f8fa;
+  }
+
+  &_image {
+    @apply hidden;
+  }
+
+  &_title {
+    @apply font-body text-default text-gray-1 flex items-center justify-start flex-initial m-0 font-normal leading-5 underline;
+    &:hover {
+      @apply text-primary;
+    }
+    &::before {
+      @apply flex-none block mr-2 bg-center bg-no-repeat bg-contain;
+      content: '';
+      width: 18px;
+      height: 20px;
+      background-image: url('./resources/images/sicherearbeit-file-icon.svg');
+      @screen md {
+        @apply mr-4;
+      }
+    }
+  }
+  &_description {
+    @apply hidden;
+  }
+  &_button {
+    @apply hidden;
+  }
+  &.download-preview {
+    .download_item {
+      @apply bg-gray-3 pb-6;
+      @screen sm {
+        max-width: 376px;
+      }
+      .download_link {
+        @apply text-s flex flex-wrap justify-center text-center;
+        .download_image {
+          @apply inline-flex;
+          max-width: 200px;
+        }
+        .download_title {
+          @apply text-s items-center justify-center w-full mt-2 mb-0 font-semibold no-underline;
+          &::before {
+            content: unset;
+          }
+        }
+        .download_description {
+          @apply text-gray-0 text-s inline-flex items-center justify-center w-full mt-1;
+        }
+        .download_button {
+          @apply inline-flex px-8 py-1 mt-4 text-white;
+          background: #d00000;
+        }
+      }
+    }
+  }
+}
+.downloadlist .download {
+  @apply mt-0;
+}
