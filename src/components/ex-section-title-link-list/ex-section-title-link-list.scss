@@ -1,0 +1,39 @@
+.section-title-link-list {
+  @apply mb-2;
+
+  @screen sm {
+    @apply mt-component-spacing-small;
+  }
+
+  > ul {
+    @apply -ml-8;
+
+    @screen sm {
+      @apply ml-0;
+    }
+  }
+
+  &__elements {
+    .section-title-link-list-element {
+      @apply mb-4 list-none;
+
+      &:last-child {
+        @apply mb-0;
+      }
+
+      &:before {
+        @apply inline-block mr-1;
+
+        content: '\25BA';
+      }
+
+      &__link {
+        @apply text-s font-semibold text-black;
+
+        &:hover {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+}
