@@ -1,26 +1,36 @@
 .accordion {
-  @apply mt-component-spacing-small shadow-component bg-white;
+  @apply mt-component-spacing-small;
 
   .cmp-accordion__item {
+    @apply mb-2;
+
+    background-color: #f5f8fa;
+
+    &:last-child {
+      @apply mb-0;
+    }
+
     .cmp-accordion__header {
-      @apply font-headline text-s text-gray-1 px-8 py-6 font-semibold;
+      @apply font-headline text-default text-gray-1 px-8 py-3 font-semibold;
 
       &:hover {
         @apply text-primary;
       }
 
       .cmp-accordion__button {
+        @apply flex items-center;
+
         &:focus {
           outline: none;
         }
 
         &::before {
-          @apply inline-block mr-2 bg-center bg-no-repeat bg-contain;
+          @apply inline-block mr-3 bg-center bg-no-repeat bg-contain;
           transition: 0.2s transform;
           content: '';
-          width: 7px;
-          height: 13px;
-          background-image: url('./resources/images/younion-arrow-gray.svg');
+          width: 15px;
+          height: 20px;
+          background-image: url('./resources/images/sicherearbeit-arrow-gray.svg');
         }
 
         &--expanded {
