@@ -14,10 +14,12 @@ blockquote {
 
       &__text {
         @apply inline-block px-4 pb-3 mb-3 border-b-2 border-white border-solid;
+
+        max-width: 95%;
       }
 
       &__text p {
-        @apply text-l italic font-light leading-6 text-white;
+        @apply text-l mt-0 italic font-light leading-6 text-white;
 
         @screen sm {
           @apply text-xxl leading-10;
