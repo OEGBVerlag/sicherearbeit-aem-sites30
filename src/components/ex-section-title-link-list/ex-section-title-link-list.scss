@@ -5,12 +5,8 @@
     @apply mt-component-spacing-small;
   }
 
-  > ul {
-    @apply -ml-8;
-
-    @screen sm {
-      @apply ml-0;
-    }
+  > ul.section-title-link-list__elements {
+    @apply ml-0;
   }
 
   &__elements {
