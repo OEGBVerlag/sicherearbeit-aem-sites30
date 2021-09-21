@@ -13,7 +13,7 @@
       }
 
       &--navigationitems {
-        @apply bg-primary absolute left-0 z-10 flex-wrap hidden w-full px-5 py-3 m-0 mt-3;
+        @apply bg-primary absolute left-0 z-10 flex-wrap hidden w-full pb-0 m-0 mt-3;
 
         &.open {
           @apply inline-flex;
@@ -26,14 +26,18 @@
     }
 
     &__item {
-      @apply flex w-full pb-2 mb-2 border-b border-white border-solid;
+      @apply flex w-full px-5 py-3 pb-2 border-b border-white border-solid;
 
       &:last-child {
-        @apply pb-0 mb-0 border-b-0;
+        @apply border-b-0;
+      }
+
+      &:hover {
+        @apply bg-interactive-state-hover-button;
       }
 
       @screen md {
-        @apply border-0;
+        @apply px-0 border-0;
 
         width: unset;
       }
@@ -61,6 +65,12 @@
     width: 32px;
     height: 32px;
     transition: 0.5s ease-in-out;
+
+    &:hover {
+      .ex-menu-burger__icon-bar {
+        @apply bg-interactive-state-hover-button;
+      }
+    }
 
     &.open {
       .ex-menu-burger__icon-bar:nth-child(1) {
