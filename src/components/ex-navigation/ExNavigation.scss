@@ -47,7 +47,7 @@
       @apply text-default text-white no-underline;
 
       @screen md {
-        @apply text-s bg-primary inline-block px-2 pt-1 pb-0 mr-8 text-white uppercase list-none transition-all duration-300 ease-in-out;
+        @apply text-s bg-primary inline-block px-2 pt-1 pb-0 mr-5 text-white uppercase list-none transition-all duration-300 ease-in-out;
 
         &:hover {
           @apply bg-interactive-state-hover-button;
