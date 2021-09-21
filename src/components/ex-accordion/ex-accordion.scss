@@ -25,7 +25,7 @@
         }
 
         &::before {
-          @apply inline-block mr-3 bg-center bg-no-repeat bg-contain;
+          @apply inline-block mr-3 transform rotate-90 bg-center bg-no-repeat bg-contain;
           transition: 0.2s transform;
           content: '';
           width: 15px;
@@ -37,7 +37,7 @@
           @apply text-primary;
 
           &::before {
-            @apply transform rotate-90;
+            @apply -rotate-90;
           }
         }
       }
