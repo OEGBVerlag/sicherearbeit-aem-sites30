@@ -3,6 +3,14 @@
 
   background: #f5f8fa;
 
+  .download {
+    @apply mt-0;
+
+    &_item {
+      @apply px-4 py-2;
+    }
+  }
+
   @screen md {
     @apply p-8 my-6;
   }
@@ -33,7 +41,7 @@
   }
 
   .downloadlist__elements {
-    @apply flex flex-col pl-0 mt-4 mb-0 list-none;
+    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 list-none;
 
     margin-left: 1.1rem;
     @screen md {
