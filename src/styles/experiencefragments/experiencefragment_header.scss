@@ -20,14 +20,23 @@ header.experiencefragment {
   }
 
   .image {
+    @screen md {
+      @apply absolute top-0 left-0 p-5 m-0 text-center;
+
+      width: 100vw;
+    }
+
     img {
-      @apply max-w-none relative p-2 mb-3;
+      @apply max-w-none relative inline-block p-2 mb-3;
 
       left: -1.25rem;
       width: 100vw !important;
 
       @screen md {
-        @apply absolute top-0 left-0 p-5 m-0;
+        @apply left-0 inline-block p-0;
+
+        width: 100% !important;
+        max-width: 2000px;
       }
     }
   }
