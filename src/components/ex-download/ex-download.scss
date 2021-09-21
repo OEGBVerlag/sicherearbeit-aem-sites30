@@ -12,7 +12,7 @@
   }
 
   &_item {
-    @apply flex flex-col w-full px-4 py-2;
+    @apply flex flex-col w-full p-4;
 
     background: #f5f8fa;
   }
@@ -85,4 +85,8 @@
 }
 .downloadlist .download {
   @apply mt-0;
+
+  &_item {
+    @apply px-4 py-2;
+  }
 }
