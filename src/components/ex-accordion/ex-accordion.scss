@@ -1,0 +1,52 @@
+.accordion {
+  @apply mt-component-spacing-small;
+
+  .cmp-accordion__item {
+    @apply mb-2;
+
+    background-color: #f5f8fa;
+
+    &:last-child {
+      @apply mb-0;
+    }
+
+    .cmp-accordion__header {
+      @apply font-headline text-default text-gray-1 px-8 py-3 font-semibold;
+
+      &:hover {
+        @apply text-primary;
+      }
+
+      .cmp-accordion__button {
+        @apply flex items-center;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::before {
+          @apply inline-block mr-3 transform rotate-90 bg-center bg-no-repeat bg-contain;
+          transition: 0.2s transform;
+          content: '';
+          width: 15px;
+          height: 20px;
+          background-image: url('./resources/images/sicherearbeit-arrow-gray.svg');
+        }
+
+        &--expanded {
+          @apply text-primary;
+
+          &::before {
+            @apply -rotate-90;
+          }
+        }
+      }
+    }
+
+    .cmp-accordion__panel {
+      @apply px-5 pb-6 bg-white;
+      // set a not visible padding top to also set the background color for the margin top of the containing component
+      padding-top: 0.05px;
+    }
+  }
+}
