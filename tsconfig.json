@@ -5,9 +5,15 @@
         "baseUrl": "../ui.frontend",
         "removeComments": true,
         "allowJs": true,
+        "noEmit": false,
         "preserveConstEnums": true,
         "allowSyntheticDefaultImports": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "jsx": "react",
+        "moduleResolution": "node"
     },
-    "include": [ "./src/**/*.ts" ]
+    "include": [
+        "./src/**/*.ts",
+        "src/custom.d.ts"
+    ]
 }

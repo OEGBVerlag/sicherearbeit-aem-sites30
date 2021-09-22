@@ -14,10 +14,18 @@
         "live": "npm-run-all -p watch proxy browser-sync"
     },
     "devDependencies": {
+        "@adobe/aem-site-theme-builder": "4.0.1",
+        "@babel/core": "^7.13.10",
+        "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
+        "@babel/plugin-transform-react-jsx": "^7.12.17",
+        "@babel/preset-react": "^7.12.13",
+        "@babel/preset-typescript": "^7.13.0",
+        "@svgr/webpack": "^5.5.0",
         "@types/react": "^17.0.3",
         "@types/react-dom": "^17.0.2",
-        "@adobe/aem-site-theme-builder": "4.0.1",
         "autoprefixer": "^9.2.1",
+        "babel-loader": "^8.2.2",
         "bestzip": "^2.1.6",
         "browser-sync": "^2.26.13",
         "clean-webpack-plugin": "^3.0.0",
@@ -26,6 +34,7 @@
         "css-loader": "^3.0.0",
         "dotenv": "^8.2.0",
         "dotenv-cli": "^3.2.0",
+        "file-loader": "^6.2.0",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.4.4",
         "node-sass": "^4.11.0",
@@ -33,11 +42,11 @@
         "npm-run-all": "^4.1.5",
         "optimize-css-assets-webpack-plugin": "^5.0.1",
         "postcss-loader": "^3.0.0",
-        "sass-loader": "^7.1.0",
         "prettier-plugin-tailwind-css": "^1.5.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-is": "^17.0.1",
+        "sass-loader": "^7.1.0",
         "tailwindcss": "^1.9.6",
         "tailwindcss-pseudo-elements": "^1.5.1",
         "terser-webpack-plugin": "^1.4.1",
@@ -56,5 +65,12 @@
         "last 2 version",
         "> 1%"
     ],
-    "dependencies": {}
+    "dependencies": {
+        "array-from": "^2.1.1",
+        "array.prototype.findindex": "^2.1.0",
+        "document-register-element": "^1.14.3",
+        "promise-polyfill": "^8.2.0",
+        "url-polyfill": "^1.1.12",
+        "whatwg-fetch": "^3.6.2"
+    }
 }
