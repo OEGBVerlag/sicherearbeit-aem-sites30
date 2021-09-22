@@ -1,0 +1,132 @@
+.navigation {
+  width: 20% !important;
+
+  @screen md {
+    width: unset !important;
+  }
+
+  .ex-navigation {
+    &__list {
+      &--hottopicitems,
+      &--topicitems {
+        @apply hidden;
+      }
+
+      &--navigationitems {
+        @apply bg-primary absolute left-0 z-10 flex-wrap hidden w-full pb-0 m-0 mt-3;
+
+        &.open {
+          @apply inline-flex;
+        }
+
+        @screen md {
+          @apply relative flex justify-start p-0 ml-0 bg-transparent;
+        }
+      }
+    }
+
+    &__item {
+      @apply flex w-full px-5 pb-2 border-b border-white border-solid;
+
+      &:last-child {
+        @apply border-b-0;
+      }
+
+      &:hover {
+        @apply bg-interactive-state-hover-button;
+
+        @screen md {
+          @apply bg-transparent;
+        }
+      }
+
+      @screen md {
+        @apply px-0 border-0;
+
+        width: unset;
+      }
+    }
+
+    &__icon {
+      @apply hidden;
+    }
+
+    &__link {
+      @apply text-default text-white no-underline;
+
+      @screen md {
+        @apply text-s bg-primary inline-block px-2 pt-1 pb-0 mr-5 text-white uppercase list-none transition-all duration-300 ease-in-out;
+
+        &:hover {
+          @apply bg-interactive-state-hover-button;
+        }
+      }
+    }
+  }
+
+  .ex-menu-burger {
+    @apply relative inline-block align-middle rotate-0 cursor-pointer select-none;
+    width: 32px;
+    height: 32px;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      .ex-menu-burger__icon-bar {
+        @apply bg-interactive-state-hover-button;
+      }
+    }
+
+    &.open {
+      .ex-menu-burger__icon-bar:nth-child(1) {
+        top: 8px;
+        transform: rotate(-30deg);
+      }
+
+      .ex-menu-burger__icon-bar:nth-child(2) {
+        top: 8px;
+        transform: rotate(30deg);
+      }
+
+      .ex-menu-burger__icon-bar:nth-child(3) {
+        @apply hidden;
+      }
+    }
+
+    @screen md {
+      @apply hidden;
+    }
+
+    &__icon-bar {
+      @apply bg-primary absolute left-0 block w-full rotate-0 opacity-100;
+      height: 5px;
+      border-radius: 5px;
+      transition: 0.25s ease-in-out;
+    }
+
+    &__icon-bar:nth-child(1) {
+      top: 2px;
+    }
+
+    &__icon-bar:nth-child(2) {
+      top: 12px;
+    }
+
+    &__icon-bar:nth-child(3) {
+      top: 22px;
+    }
+
+    &.open &__icon-bar:nth-child(1) {
+      top: 8px;
+      transform: rotate(-30deg);
+    }
+
+    &.open &__icon-bar:nth-child(2) {
+      top: 8px;
+      transform: rotate(30deg);
+    }
+
+    &.open &__icon-bar:nth-child(3) {
+      @apply hidden;
+    }
+  }
+}
