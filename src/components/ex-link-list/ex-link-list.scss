@@ -1,0 +1,53 @@
+.linklist {
+  @apply w-full p-8 my-8;
+
+  background: #f5f8fa;
+
+  .ex-linklist_title {
+    @apply font-body text-gray-0 text-l relative flex items-center pl-12 font-semibold leading-5 uppercase;
+
+    &::before {
+      @apply absolute left-0 bg-center bg-no-repeat bg-contain;
+
+      content: '';
+      height: 3rem;
+      width: 2rem;
+      background-image: url('./resources/images/sicherearbeit-icon-link-list-title.svg');
+
+      @screen md {
+        @apply mr-8;
+      }
+    }
+  }
+
+  .ex-linklist_elements {
+    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 list-none;
+
+    margin-left: 1.1rem;
+
+    @screen md {
+      margin-left: 3.5rem;
+    }
+
+    .ex-linklist_element {
+      @apply flex items-center justify-start flex-initial w-full px-4 py-2 m-0;
+
+      a {
+        @apply text-gray-1;
+
+        &:hover {
+          @apply text-primary;
+        }
+      }
+
+      &::before {
+        @apply block mr-4 bg-center bg-no-repeat bg-contain;
+
+        content: '';
+        width: 18px;
+        height: 20px;
+        background-image: url('./resources/images/sicherearbeit-icon-link-list-ele.svg');
+      }
+    }
+  }
+}
