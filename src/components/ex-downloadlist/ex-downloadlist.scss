@@ -1,0 +1,51 @@
+.downloadlist {
+  @apply w-full p-5 my-8;
+
+  background: #f5f8fa;
+
+  .download {
+    @apply mt-0;
+
+    &_item {
+      @apply px-4 py-2;
+    }
+  }
+
+  @screen md {
+    @apply p-8 my-6;
+  }
+
+  .downloadlist__header {
+    @apply font-body text-gray-0 relative pl-12 font-normal leading-5;
+
+    &::before {
+      @apply absolute left-0 bg-center bg-no-repeat bg-contain;
+
+      content: '';
+      height: 3rem;
+      width: 2rem;
+      background-image: url('./resources/images/sicherearbeit-icon-download.svg');
+
+      @screen md {
+        @apply mr-8;
+      }
+    }
+
+    .downloadlist__title {
+      @apply text-l font-semibold uppercase;
+    }
+
+    .downloadlist__subtitle {
+      @apply text-s mt-2;
+    }
+  }
+
+  .downloadlist__elements {
+    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 list-none;
+
+    margin-left: 1.1rem;
+    @screen md {
+      margin-left: 3.5rem;
+    }
+  }
+}
