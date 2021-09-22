@@ -23,6 +23,10 @@
 
   &_link {
     @apply text-gray-1;
+
+    &:hover {
+      @apply text-primary;
+    }
   }
 
   &_title {
@@ -56,13 +60,19 @@
         max-width: 376px;
       }
       .download_link {
-        @apply text-s text-gray-1 flex flex-wrap justify-center text-center;
+        @apply text-s text-gray-1 flex flex-wrap justify-center text-center no-underline;
+
+        &:hover {
+          @apply text-primary;
+        }
+
         .download_image {
           @apply inline-flex;
           max-width: 200px;
         }
+
         .download_title {
-          @apply text-s text-gray-1 items-center justify-center w-full mt-2 mb-0 font-semibold no-underline;
+          @apply text-s text-gray-1 items-center justify-center w-full mt-2 mb-0 font-semibold underline;
 
           &:hover {
             @apply text-primary;
@@ -73,7 +83,7 @@
           }
         }
         .download_description {
-          @apply text-gray-0 text-s inline-flex items-center justify-center w-full mt-1;
+          @apply text-gray-0 text-s inline-flex items-center justify-center w-full mt-1 cursor-default;
         }
 
         .download_button {
