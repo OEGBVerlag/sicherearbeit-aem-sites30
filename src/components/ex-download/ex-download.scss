@@ -53,7 +53,7 @@
   }
   &.download-preview {
     .download_item {
-      @apply pb-6;
+      @apply py-6;
       background: #f5f8fa;
 
       @screen sm {
