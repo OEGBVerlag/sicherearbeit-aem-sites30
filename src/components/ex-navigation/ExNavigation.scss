@@ -34,6 +34,10 @@
 
       &:hover {
         @apply bg-interactive-state-hover-button;
+
+        @screen md {
+          @apply bg-transparent;
+        }
       }
 
       @screen md {
