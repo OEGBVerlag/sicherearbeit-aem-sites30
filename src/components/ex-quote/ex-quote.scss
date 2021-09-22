@@ -1,9 +1,9 @@
 body .quote blockquote.quote-component,
 blockquote {
-  @apply bg-primary py-10 mx-auto my-6;
+  @apply my-6;
 
   .quote__content {
-    @apply text-center;
+    @apply bg-primary py-10 mx-auto mb-3 text-center;
 
     .quote {
       &__text,

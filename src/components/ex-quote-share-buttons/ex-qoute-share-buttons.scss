@@ -1,0 +1,22 @@
+.ex-qoute-share-buttons {
+  @apply flex justify-center;
+
+  &__link {
+    @apply bg-primary p-2 mr-4 transition-all duration-300 ease-in-out rounded-full;
+
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+      @apply bg-interactive-state-hover-button;
+    }
+
+    &:last-child {
+      @apply mr-0;
+    }
+  }
+
+  &__icon {
+    @apply object-contain w-full h-full;
+  }
+}
