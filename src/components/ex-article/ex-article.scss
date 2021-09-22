@@ -153,6 +153,19 @@
           @apply absolute top-0 left-0 w-full h-full border-none;
         }
       }
+
+      .quote {
+        blockquote {
+          @apply mb-0;
+        }
+
+        @media (min-width: 1600px) {
+          @apply relative;
+
+          left: -5%;
+          width: 110% !important;
+        }
+      }
     }
   }
 }
