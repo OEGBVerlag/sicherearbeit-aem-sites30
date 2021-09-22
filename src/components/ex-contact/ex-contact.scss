@@ -1,10 +1,6 @@
 .ex-contact {
   @apply text-gray-0 text-s mt-component-spacing-small w-full;
 
-  &:first-child {
-    @apply pl-8;
-  }
-
   a {
     @apply text-gray-0 text-s underline;
 
