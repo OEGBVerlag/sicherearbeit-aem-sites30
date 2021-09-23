@@ -1,0 +1,22 @@
+.cmp-image {
+  &__details {
+    @apply font-body text-gray-0 text-s mt-2 font-normal leading-4;
+  }
+
+  &__copyright {
+    @apply text-s;
+  }
+}
+
+// Apply margin top only when the image component is manually added and provide style to remove it
+.image {
+  .cmp-image {
+    @apply mt-component-spacing-small;
+  }
+
+  &--no-margin-top {
+    .cmp-image {
+      @apply mt-0;
+    }
+  }
+}
