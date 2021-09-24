@@ -26,7 +26,7 @@
     &__section {
       @apply relative;
 
-      height: 600px;
+      height: 400px;
     }
 
     &__inner {
@@ -34,20 +34,12 @@
     }
 
     &__title {
-      @apply text-primary text-xxl inline-block px-4 font-light text-center uppercase break-words bg-white;
+      @apply text-primary text-xxxl inline-block px-4 font-light text-center uppercase break-words bg-white;
       hyphens: auto;
-
-      @screen sm {
-        @apply text-xxxl;
-      }
-
-      @screen md {
-        font-size: 51px;
-      }
     }
 
     &__button {
-      @apply bg-primary text-default z-10 px-8 py-3 mt-4 font-light text-white uppercase transition-all duration-100 ease-in-out;
+      @apply bg-primary text-default z-10 px-8 py-2 mt-4 font-light text-white uppercase transition-all duration-100 ease-in-out;
 
       &:hover {
         @screen sm {
