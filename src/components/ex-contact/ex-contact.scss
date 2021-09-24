@@ -1,0 +1,53 @@
+.ex-contact {
+  @apply text-gray-0 text-s mt-component-spacing-small w-full;
+
+  a {
+    @apply text-gray-0 text-s underline;
+
+    &:hover {
+      @apply text-primary;
+    }
+  }
+
+  .ex-address,
+  &__phone-number,
+  &__email {
+    @apply flex content-center mb-2;
+
+    &:last-child {
+      @apply mb-0;
+    }
+
+    &:before {
+      @apply inline-block w-4 mr-2;
+    }
+  }
+
+  .ex-address {
+    &__plz {
+      @apply whitespace-pre;
+
+      &:not(:first-child):before {
+        @apply mr-1;
+
+        content: ',';
+      }
+    }
+
+    &:before {
+      content: url('./resources/images/sicherearbeit-contact-address.svg');
+    }
+  }
+
+  &__phone-number {
+    &:before {
+      content: url('./resources/images/sicherearbeit-contact-phone.svg');
+    }
+  }
+
+  &__email {
+    &:before {
+      content: url('./resources/images/sicherearbeit-contact-email.svg');
+    }
+  }
+}
