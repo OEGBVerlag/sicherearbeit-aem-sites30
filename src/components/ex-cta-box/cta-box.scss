@@ -1,0 +1,158 @@
+.cta {
+  @apply mt-component-spacing-small h-full;
+
+  &__text {
+    a {
+      @apply underline transition-all duration-300 ease-in-out;
+
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+
+  .cta__button {
+    @apply w-auto px-6 py-2 mx-auto mt-6 no-underline break-all;
+  }
+
+  &__title {
+    hyphens: auto;
+  }
+
+  &--background-color {
+    @apply bg-primary flex flex-col h-full px-8 py-6 mx-auto;
+
+    .cta__title {
+      @apply text-xl font-light text-center text-white uppercase;
+    }
+
+    .cta__text {
+      @apply flex-grow mt-6 text-center text-white;
+
+      a:hover {
+        @apply text-gray-3;
+      }
+    }
+
+    .cta__button {
+      @apply text-primary relative flex items-center text-left uppercase transition-all duration-100 ease-in-out bg-white;
+
+      &:hover {
+        @screen sm {
+          @apply bg-interactive-state-hover-button text-white no-underline;
+        }
+      }
+    }
+
+    &[data-bg-color='#AB0F1F'] {
+      background-color: rgba(171, 15, 31, 1);
+
+      .cta__button {
+        @apply text-black;
+
+        &:hover {
+          @screen sm {
+            @apply text-white;
+          }
+        }
+      }
+    }
+
+    &[data-bg-color='#B7BAB6'] {
+      background-color: rgba(183, 186, 182, 1);
+
+      .cta__title,
+      .cta__text {
+        @apply text-black;
+
+        a {
+          &:hover {
+            @apply text-interactive-state-hover-link;
+          }
+        }
+      }
+
+      .cta__button {
+        @apply text-black;
+
+        &:hover {
+          @screen sm {
+            @apply text-white;
+          }
+        }
+      }
+    }
+  }
+
+  .cta--background-image {
+    @apply relative flex flex-col h-full px-2 py-6 mx-auto text-center uppercase;
+
+    .cta__container {
+      @apply px-4 mx-auto;
+    }
+
+    .cta__title {
+      @apply font-headline text-primary text-xl font-light;
+    }
+
+    .cta__text {
+      @apply font-menu text-default flex-grow font-light text-black;
+    }
+
+    .cta__button {
+      @apply bg-primary inline-block text-white transition-all duration-100 ease-in-out;
+
+      &:hover {
+        @screen sm {
+          @apply bg-interactive-state-hover-button text-white no-underline;
+        }
+      }
+    }
+  }
+
+  &--icon {
+    @apply bg-primary relative top-0 right-0 flex flex-col px-8 pt-5 pb-8 mx-auto;
+
+    .cta__icon {
+      @apply h-24 bg-center bg-no-repeat;
+
+      &--email {
+        background-image: url('./resources/images/sicherearbeit-icon-email.svg');
+      }
+
+      &--phone {
+        background-image: url('./resources/images/sicherearbeit-icon-phone.svg');
+      }
+
+      &--link {
+        background-image: url('./resources/images/sicherearbeit-icon-laptop.svg');
+      }
+
+      &--mail {
+        background-image: url('./resources/images/sicherearbeit-icon-mail.svg');
+      }
+    }
+
+    .cta__title {
+      @apply font-menu mt-2 text-xl font-medium text-center text-white uppercase;
+    }
+
+    .cta__text {
+      @apply text-default mt-2 font-normal text-center text-white;
+
+      p {
+        @apply mt-0;
+      }
+    }
+
+    .cta__button {
+      @apply text-default text-primary flex items-center text-left uppercase transition-all duration-100 ease-in-out bg-white;
+
+      &:hover {
+        @screen sm {
+          @apply bg-interactive-state-hover-button text-white no-underline;
+        }
+      }
+    }
+  }
+}
