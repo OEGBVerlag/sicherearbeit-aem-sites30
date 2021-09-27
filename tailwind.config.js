@@ -107,6 +107,7 @@ module.exports = {
       },
       maxWidth: {
         site: '1500px',
+        article: '1000px',
         'narrow-site': '882px',
       },
       transitionProperty: {
