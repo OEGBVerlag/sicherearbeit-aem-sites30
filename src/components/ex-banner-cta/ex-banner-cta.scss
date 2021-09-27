@@ -1,0 +1,49 @@
+.react-parallax-bgimage {
+  @apply text-primary;
+
+  height: 600px;
+  max-width: inherit;
+}
+
+.react-parallax {
+  height: 600px;
+}
+
+.react-parallax-content {
+  @apply h-full;
+}
+
+.bannercta {
+  @apply mt-component-spacing-small;
+
+  .ex-banner-cta {
+    @apply no-underline;
+
+    &:hover {
+      @apply no-underline;
+    }
+
+    &__section {
+      @apply relative;
+
+      height: 400px;
+    }
+
+    &__inner {
+      @apply max-w-site flex flex-col items-center justify-end h-full px-4 pb-16 mx-auto;
+    }
+
+    &__title {
+      @apply text-primary text-xxxl inline-block px-4 font-light text-center uppercase break-words bg-white;
+      hyphens: auto;
+    }
+
+    &__button {
+      @apply bg-primary text-default z-10 px-8 py-2 mt-4 font-light text-white uppercase transition-all duration-100 ease-in-out;
+
+      &:hover {
+        @apply bg-interactive-state-hover-button text-white no-underline;
+      }
+    }
+  }
+}
