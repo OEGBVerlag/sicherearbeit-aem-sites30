@@ -1,5 +1,5 @@
 .cmp-article {
-  @apply flex flex-col;
+  @apply mt-component-spacing max-w-article flex flex-col mx-auto;
 
   p {
     @apply mt-1;
