@@ -140,7 +140,7 @@
     }
 
     .cta__button {
-      @apply text-default text-primary flex items-center text-left uppercase transition-all duration-100 ease-in-out bg-white;
+      @apply text-default text-primary flex items-center text-center uppercase transition-all duration-100 ease-in-out bg-white;
 
       &:hover {
         @apply bg-interactive-state-hover-button text-white no-underline;
