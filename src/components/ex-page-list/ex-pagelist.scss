@@ -5,7 +5,7 @@ $itemSpacing: 30px;
 .pagelist {
   &-contentfragmentlist {
     &__item {
-      @apply mt-component-spacing-small top-0 right-0;
+      @apply mt-component-spacing top-0 right-0;
 
       &--list {
         @apply w-full;

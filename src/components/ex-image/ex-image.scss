@@ -11,7 +11,7 @@
 // Apply margin top only when the image component is manually added and provide style to remove it
 .image {
   .cmp-image {
-    @apply mt-component-spacing-small;
+    @apply mt-component-spacing;
   }
 
   &--no-margin-top {

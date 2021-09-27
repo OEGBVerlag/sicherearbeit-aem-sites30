@@ -1,5 +1,5 @@
 .cmp-article {
-  @apply mt-component-spacing max-w-article flex flex-col mx-auto;
+  @apply mt-component-spacing-big max-w-article flex flex-col mx-auto;
 
   p {
     @apply mt-1;
@@ -167,5 +167,9 @@
         }
       }
     }
+  }
+
+  .cmp-image {
+    @apply my-component-spacing;
   }
 }

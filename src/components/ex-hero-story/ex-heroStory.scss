@@ -1,15 +1,11 @@
 .heroStory {
-  @apply mb-4;
+  @apply mt-component-spacing mb-4;
 
   .hero-story__content {
     @apply flex flex-wrap-reverse;
 
     @screen sm {
       @apply flex-row-reverse justify-between;
-    }
-
-    @screen md {
-      @apply mt-12;
     }
   }
 

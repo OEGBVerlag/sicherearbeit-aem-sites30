@@ -1,4 +1,6 @@
 .banner {
+  @apply mt-component-spacing;
+
   .ex-banner {
     @apply w-full mb-10 text-center bg-center bg-no-repeat bg-cover;
 

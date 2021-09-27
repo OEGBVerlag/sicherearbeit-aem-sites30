@@ -1,5 +1,5 @@
 .ex-person {
-  @apply mt-component-spacing-small flex flex-row flex-wrap content-between flex-initial w-full;
+  @apply mt-component-spacing flex flex-row flex-wrap content-between flex-initial w-full;
 
   &_address,
   &_mobile,
@@ -74,7 +74,7 @@
   &_phone {
     .ex-person_label {
       @apply w-4 h-3;
-      
+
       background-image: url(./resources/images/sicherearbeit-contact-phone.svg);
     }
   }

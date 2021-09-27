@@ -1,6 +1,6 @@
 body .quote blockquote.quote-component,
 blockquote {
-  @apply my-6;
+  @apply my-component-spacing;
 
   .quote__content {
     @apply bg-primary py-10 mx-auto mb-3 text-center;
