@@ -42,9 +42,7 @@
       @apply bg-primary text-default z-10 px-8 py-2 mt-4 font-light text-white uppercase transition-all duration-100 ease-in-out;
 
       &:hover {
-        @screen sm {
-          @apply bg-interactive-state-hover-button text-white no-underline;
-        }
+        @apply bg-interactive-state-hover-button text-white no-underline;
       }
     }
   }
