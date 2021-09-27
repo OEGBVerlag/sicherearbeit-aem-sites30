@@ -49,9 +49,7 @@
         @apply text-black;
 
         &:hover {
-          @screen sm {
-            @apply text-white;
-          }
+          @apply text-white;
         }
       }
     }
