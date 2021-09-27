@@ -1,12 +1,14 @@
+$boxSize: 600px;
+
 .react-parallax-bgimage {
   @apply text-primary;
 
-  height: 600px;
+  height: $boxSize;
   max-width: inherit;
 }
 
 .react-parallax {
-  height: 600px;
+  height: $boxSize;
 }
 
 .react-parallax-content {
@@ -26,7 +28,7 @@
     &__section {
       @apply relative;
 
-      height: 400px;
+      height: $boxSize;
     }
 
     &__inner {
