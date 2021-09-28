@@ -169,7 +169,8 @@
     }
   }
 
-  .cmp-image {
+  .cmp-image,
+  table {
     @apply my-component-spacing;
   }
 }
