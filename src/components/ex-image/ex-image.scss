@@ -1,10 +1,10 @@
 .cmp-image {
   &__details {
-    @apply font-body text-gray-0 text-s mt-2 font-normal leading-4;
+    @apply font-body text-gray-0 text-s mt-2 italic font-normal leading-4;
   }
 
   &__copyright {
-    @apply text-s;
+    @apply text-s italic;
   }
 }
 
