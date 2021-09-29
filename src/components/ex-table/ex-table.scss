@@ -1,5 +1,5 @@
 table {
-  @apply mt-component-spacing-small inline-block max-w-full overflow-x-scroll;
+  @apply mt-component-spacing-small inline-block max-w-full overflow-x-auto;
 
   * {
     @apply border border-black border-solid;
