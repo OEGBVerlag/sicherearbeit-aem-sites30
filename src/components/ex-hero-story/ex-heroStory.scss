@@ -51,48 +51,45 @@
     @apply text-primary my-2 text-xl font-bold leading-tight;
 
     a:hover {
-      @apply text-interactive-state-hover-link underline;
+      @apply text-interactive-state-hover-link;
+    }
+
+    a {
+      @apply no-underline;
+
+      &:hover {
+        @apply underline;
+      }
     }
   }
-
   .hero-story__title-link {
-    @apply font-headline text-primary inline-block pb-2 text-xl font-semibold;
-
+    @apply font-headline text-primary inline-block pb-2 text-xl font-semibold no-underline;
     &:hover {
-      @apply text-interactive-state-hover-link underline;
+      @apply text-interactive-state-hover-link;
     }
   }
-
   .hero-story__preview {
     @apply text-gray-0 text-default m-0;
   }
-
   .hero-story__topic {
     @apply font-headline tracking-default flex items-center mt-0 mb-1 text-xs font-light leading-none text-black uppercase;
-
     &:before {
       @apply inline-block mr-1;
-
       content: '\25BA';
     }
   }
-
   .hero-story__meta {
     @apply flex flex-row-reverse justify-end mt-4 text-xs leading-tight;
   }
-
   .hero-story__author {
     @apply tracking-default inline-flex content-center font-semibold text-black uppercase;
-
     &:not(:first-child) {
       &:after {
         @apply inline-block h-full mx-2 border-r-2 border-black border-solid;
-
         content: '';
       }
     }
   }
-
   .hero-story__publish-date {
     @apply flex items-center;
   }
