@@ -96,9 +96,7 @@
       }
 
       &--mainText {
-        @screen sm {
-          @apply leading-8;
-        }
+        @apply leading-8;
       }
 
       &--articleDate {
