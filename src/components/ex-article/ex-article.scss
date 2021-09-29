@@ -1,5 +1,5 @@
 .cmp-article {
-  @apply mt-component-spacing max-w-article flex flex-col mx-auto;
+  @apply mt-component-spacing-big max-w-article flex flex-col mx-auto;
 
   p {
     @apply mt-1;
@@ -96,9 +96,7 @@
       }
 
       &--mainText {
-        @screen sm {
-          @apply leading-8;
-        }
+        @apply leading-8;
       }
 
       &--articleDate {
@@ -167,5 +165,11 @@
         }
       }
     }
+  }
+
+  .quote,
+  .cmp-image,
+  table {
+    @apply my-component-spacing;
   }
 }

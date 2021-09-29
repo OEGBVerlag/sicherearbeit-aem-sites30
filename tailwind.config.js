@@ -83,9 +83,9 @@ module.exports = {
       },
       spacing: {
         '1/2': '0.125rem',
-        'component-spacing-small': '1.5rem',
-        'component-spacing': '3rem',
-        'component-spacing-big': '6rem',
+        'component-spacing-small': '0.5rem',
+        'component-spacing': '1.5rem',
+        'component-spacing-big': '3rem',
       },
       width: {
         'max-site': '1500px',

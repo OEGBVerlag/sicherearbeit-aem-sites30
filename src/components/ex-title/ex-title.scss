@@ -1,5 +1,7 @@
 .title {
   .cmp-title {
+    @apply mt-component-spacing;
+
     scroll-margin-top: 100px;
 
     &__text,
