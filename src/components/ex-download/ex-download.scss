@@ -67,8 +67,9 @@
         }
 
         .download_image {
-          @apply inline-flex;
-          max-width: 200px;
+          @apply inline-flex max-w-full;
+
+          width: 200px;
         }
 
         .download_title {
