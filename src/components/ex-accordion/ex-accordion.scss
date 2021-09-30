@@ -2,16 +2,14 @@
   @apply mt-component-spacing;
 
   .cmp-accordion__item {
-    @apply mb-2;
-
-    background-color: #f5f8fa;
+    @apply bg-gray-4 mb-2;
 
     &:last-child {
       @apply mb-0;
     }
 
     .cmp-accordion__header {
-      @apply font-headline text-default text-gray-1 px-8 py-3 font-semibold;
+      @apply text-gray-1 px-8 py-3 font-semibold;
 
       &:hover {
         @apply text-primary;
@@ -26,6 +24,7 @@
 
         &::before {
           @apply inline-block mr-3 transform rotate-90 bg-center bg-no-repeat bg-contain;
+
           transition: 0.2s transform;
           content: '';
           width: 15px;

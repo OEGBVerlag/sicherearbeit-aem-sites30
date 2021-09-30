@@ -105,7 +105,7 @@ $itemSpacing: 30px;
     }
 
     &__meta-data {
-      @apply font-headline text-gray-0 tracking-default flex items-center mt-0 mb-1 text-xs font-light leading-none uppercase;
+      @apply text-gray-0 tracking-default flex items-center mt-0 mb-1 text-xs font-light leading-none uppercase;
 
       &:before {
         @apply inline-block mr-1;
@@ -139,7 +139,7 @@ $itemSpacing: 30px;
     }
 
     &__title {
-      @apply text-primary font-headline text-l my-2 mb-2 font-bold leading-tight break-words;
+      @apply text-primary text-l my-2 mb-2 font-bold leading-tight break-words;
 
       hyphens: auto;
 
@@ -149,7 +149,7 @@ $itemSpacing: 30px;
     }
 
     &__previewText {
-      @apply text-gray-0 font-headline text-default mb-2 font-normal leading-tight;
+      @apply text-gray-0 text-default mb-2 font-normal leading-tight;
     }
 
     &__footer {

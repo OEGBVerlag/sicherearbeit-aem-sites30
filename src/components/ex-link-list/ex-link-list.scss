@@ -4,7 +4,7 @@
   background: #f5f8fa;
 
   .ex-linklist_title {
-    @apply font-body text-gray-0 text-l relative flex items-center pl-12 font-semibold leading-5 uppercase;
+    @apply text-gray-0 text-l relative flex items-center pl-12 font-semibold leading-5 uppercase;
 
     &::before {
       @apply absolute left-0 bg-center bg-no-repeat bg-contain;

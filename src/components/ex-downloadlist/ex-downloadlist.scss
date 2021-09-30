@@ -1,7 +1,5 @@
 .downloadlist {
-  @apply mt-component-spacing w-full p-5 my-8;
-
-  background: #f5f8fa;
+  @apply mt-component-spacing bg-gray-4 w-full p-5 my-8;
 
   .download {
     @apply mt-0;
@@ -16,7 +14,7 @@
   }
 
   .downloadlist__header {
-    @apply font-body text-gray-0 relative pl-12 font-normal leading-5;
+    @apply text-gray-0 relative pl-12 font-normal leading-5;
 
     &::before {
       @apply absolute left-0 bg-center bg-no-repeat bg-contain;

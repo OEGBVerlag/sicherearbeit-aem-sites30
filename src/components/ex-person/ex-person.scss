@@ -26,7 +26,7 @@
   }
 
   &_info {
-    @apply font-body text-gray-1 flex flex-col flex-wrap items-start w-full mt-4 font-light leading-5;
+    @apply text-gray-1 flex flex-col flex-wrap items-start w-full mt-4 font-light leading-5;
 
     @screen sm {
       @apply text-s w-2/3 pr-4 mt-0;
