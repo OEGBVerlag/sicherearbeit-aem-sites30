@@ -58,6 +58,28 @@ module.exports = {
         ],
       },
       /**
+       * Handle fonts
+       */
+      {
+        test: /\.(woff|woff2|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './clientlib-site/resources/fonts/',
+              publicPath(url, resourcePath, context) {
+                if (process.env.NODE_ENV === 'development') {
+                  return `../clientlib-site/resources/fonts/${url}`
+                }
+
+                return `../resources/fonts/${url}`
+              },
+            },
+          },
+        ],
+      },
+      /**
        * Handling SVGs in both tsx and scss
        */
       {
