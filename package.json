@@ -6,15 +6,13 @@
     "main": "src/main.ts",
     "license": "MIT License, Copyright 2020 Adobe Systems Incorporated",
     "scripts": {
-        "build": "webpack -p --config ./webpack.prod.js",
-        "compile": "webpack -d --env dev --config ./webpack.dev.js",
-        "browser-sync": "browser-sync start --proxy 'localhost:7000' --files 'dist'",
+        "build": "webpack --config ./webpack.prod.js",
+        "compile": "webpack --config ./webpack.dev.js",
         "proxy": "aem-site-theme-builder live",
-        "watch": "watch \"npm run compile\" src",
-        "live": "npm-run-all -p watch proxy browser-sync"
+        "live": "npm-run-all -p compile proxy"
     },
     "devDependencies": {
-        "@adobe/aem-site-theme-builder": "4.0.1",
+        "@adobe/aem-site-theme-builder": "5.1.1",
         "@babel/core": "^7.13.10",
         "@babel/plugin-proposal-class-properties": "^7.13.0",
         "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
@@ -32,6 +30,7 @@
         "copy-webpack-plugin": "^5.0.4",
         "cross-var": "^1.1.0",
         "css-loader": "^3.0.0",
+        "cssnano": "^5.0.8",
         "dotenv": "^8.2.0",
         "dotenv-cli": "^3.2.0",
         "file-loader": "^6.2.0",
