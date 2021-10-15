@@ -75,6 +75,7 @@ module.exports = {
           1: '#656565',
           2: '#8E8E8E',
           3: '#D9D9D9',
+          4: '#f5f8fa',
         },
 
         //interactive

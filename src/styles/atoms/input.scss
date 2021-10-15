@@ -1,0 +1,24 @@
+input,
+select {
+  @apply bg-gray-4 border-gray-4 w-full p-2 mt-1 mb-3 text-black border outline-none;
+
+  &[type='submit'] {
+    @apply bg-primary text-white cursor-pointer;
+
+    &:hover {
+      @apply bg-interactive-state-hover-button;
+    }
+  }
+
+  &[type='checkbox'] {
+    @apply w-auto;
+  }
+
+  &[type='radio'] {
+    @apply w-auto;
+  }
+
+  &:focus {
+    @apply border-primary;
+  }
+}

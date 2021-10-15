@@ -1,0 +1,37 @@
+/**
+ * Mailworx Styles
+ */
+
+.form-content {
+  @apply text-left;
+
+  .page {
+    @apply w-full;
+
+    @screen md {
+      @apply w-1/2;
+    }
+  }
+
+  .field {
+    &.select {
+      .field__normal {
+        @apply mt-2;
+      }
+    }
+
+    &.text {
+      @apply mt-3;
+    }
+
+    &--bool {
+      &--left {
+        @apply flex;
+
+        input {
+          @apply mr-2;
+        }
+      }
+    }
+  }
+}
