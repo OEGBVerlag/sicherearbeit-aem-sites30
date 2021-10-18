@@ -14,15 +14,7 @@
   }
 
   .field {
-    &.select {
-      .field__normal {
-        @apply mt-2;
-      }
-    }
-
-    &.text {
-      @apply mt-3;
-    }
+    @apply mt-3;
 
     &--bool {
       &--left {
