@@ -35,19 +35,19 @@
     }
 
     &:before {
-      content: url('./resources/images/sicherearbeit-contact-address.svg');
+      content: url('../../resources/images/sicherearbeit-contact-address.svg');
     }
   }
 
   &__phone-number {
     &:before {
-      content: url('./resources/images/sicherearbeit-contact-phone.svg');
+      content: url('../../resources/images/sicherearbeit-contact-phone.svg');
     }
   }
 
   &__email {
     &:before {
-      content: url('./resources/images/sicherearbeit-contact-email.svg');
+      content: url('../../resources/images/sicherearbeit-contact-email.svg');
     }
   }
 }

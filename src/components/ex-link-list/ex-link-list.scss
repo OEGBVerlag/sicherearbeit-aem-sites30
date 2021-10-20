@@ -12,7 +12,7 @@
       content: '';
       height: 3rem;
       width: 2rem;
-      background-image: url('./resources/images/sicherearbeit-icon-link-list-title.svg');
+      background-image: url('../../resources/images/sicherearbeit-icon-link-list-title.svg');
 
       @screen md {
         @apply mr-8;
@@ -46,7 +46,7 @@
         content: '';
         width: 18px;
         height: 20px;
-        background-image: url('./resources/images/sicherearbeit-icon-link-list-ele.svg');
+        background-image: url('../../resources/images/sicherearbeit-icon-link-list-ele.svg');
       }
     }
   }

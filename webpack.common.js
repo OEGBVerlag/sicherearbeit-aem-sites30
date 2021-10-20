@@ -31,6 +31,7 @@ module.exports = {
   entry: {
     site: SOURCE_ROOT + '/main.ts',
   },
+  context: path.resolve(__dirname, 'src'),
   output: {
     filename: 'js/theme.js',
     path: path.resolve(__dirname, 'dist'),
@@ -66,16 +67,9 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: './clientlib-site/resources/fonts/',
-              publicPath(url, resourcePath, context) {
-                if (process.env.NODE_ENV === 'development') {
-                  return `../clientlib-site/resources/fonts/${url}`
-                }
-
-                return `../resources/fonts/${url}`
-              },
-            },
+              name: '[path][name].[ext]',
+              publicPath: '/',
+            }
           },
         ],
       },
@@ -84,7 +78,14 @@ module.exports = {
        */
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              publicPath: '/',
+            }
+          }],
       },
       {
         test: /\.scss$/,
@@ -92,9 +93,6 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {
-              url: false,
-            },
           },
           {
             loader: 'postcss-loader',
@@ -105,27 +103,22 @@ module.exports = {
             },
           },
           {
+            loader: 'resolve-url-loader',
+          },
+          {
             loader: 'sass-loader',
             options: {
-              url: false,
+              sourceMap: true,
+              sourceMapContents: false,
             },
           },
           {
             loader: 'webpack-import-glob-loader',
             options: {
-              url: false,
+              url: true,
             },
           },
         ],
-      },
-      {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
-        },
       },
     ],
   },
@@ -135,7 +128,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/theme.css',
     }),
-    new CopyWebpackPlugin([{ from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './resources' }]),
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),

@@ -69,6 +69,7 @@
         "array.prototype.findindex": "^2.1.0",
         "document-register-element": "^1.14.3",
         "promise-polyfill": "^8.2.0",
+        "resolve-url-loader": "^4.0.0",
         "url-polyfill": "^1.1.12",
         "whatwg-fetch": "^3.6.2"
     }

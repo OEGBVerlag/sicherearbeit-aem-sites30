@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('IstokWeb Regular'), local('IstokWeb-Regular'),
-    url('/resources/fonts/IstokWeb-Regular.ttf') format('truetype');
+    url('../resources/fonts/IstokWeb-Regular.ttf') format('truetype');
   font-display: block;
 }
 
@@ -11,7 +11,7 @@
   font-family: 'Istok';
   font-style: italic;
   font-weight: 400;
-  src: local('IstokWeb Italic'), local('IstokWeb-Italic') url('/resources/fonts/IstokWeb-Italic.ttf') format('truetype');
+  src: local('IstokWeb Italic'), local('IstokWeb-Italic'), url('../resources/fonts/IstokWeb-Italic.ttf') format('truetype');
   font-display: block;
 }
 
@@ -19,6 +19,6 @@
   font-family: 'Istok';
   font-style: bold;
   font-weight: 600;
-  src: local('IstokWeb Bold'), local('IstokWeb-Bold'), url('/resources/fonts/IstokWeb-Bold.ttf') format('truetype');
+  src: local('IstokWeb Bold'), local('IstokWeb-Bold'), url('../resources/fonts/IstokWeb-Bold.ttf') format('truetype');
   font-display: block;
 }
