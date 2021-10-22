@@ -1,5 +1,9 @@
 .downloadlist {
-  @apply mt-component-spacing bg-gray-4 w-full p-5 my-8;
+  @apply bg-gray-4 w-full p-5 my-8 mt-10;
+
+  @screen sm {
+    @apply mt-component-spacing;
+  }
 
   .download {
     @apply mt-0;
