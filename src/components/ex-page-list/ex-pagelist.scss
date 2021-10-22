@@ -5,7 +5,11 @@ $itemSpacing: 30px;
 .pagelist {
   &-contentfragmentlist {
     &__item {
-      @apply mt-component-spacing top-0 right-0;
+      @apply top-0 right-0 mt-8;
+
+      @screen sm {
+        @apply mt-component-spacing;
+      }
 
       &--list {
         @apply w-full;
@@ -154,6 +158,10 @@ $itemSpacing: 30px;
 
     &__footer {
       @apply flex flex-row-reverse justify-end my-2 text-xs leading-tight;
+
+      & > div:first-child {
+        @apply flex-shrink-0;
+      }
     }
 
     &_article-date {

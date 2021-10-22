@@ -9,6 +9,10 @@
     @apply text-black;
   }
 
+  .cmp-image {
+    @apply mt-3;
+  }
+
   &__elements {
     @screen md {
       @apply p-0 m-0;
@@ -19,7 +23,7 @@
     h4,
     h5,
     h6 {
-      @apply text-primary pt-3 font-semibold leading-8;
+      @apply text-primary pt-6 font-semibold leading-8;
       scroll-margin-top: 100px;
 
       @screen md {
@@ -168,7 +172,6 @@
   }
 
   .quote,
-  .cmp-image,
   table {
     @apply my-component-spacing;
   }
