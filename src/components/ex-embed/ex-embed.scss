@@ -14,15 +14,37 @@
   }
 
   .field {
-    @apply mt-3;
+    @apply my-3;
 
     &--bool {
       &--left {
-        @apply flex;
+        @apply flex flex-wrap;
 
         input {
           @apply mr-2;
         }
+
+        .field__normal {
+          @apply flex-grow flex-shrink-0;
+
+          max-width: 4%;
+        }
+
+        .label {
+          @apply flex-grow flex-shrink-0;
+
+          flex-basis: 10px;
+        }
+      }
+    }
+
+    &__error {
+      @apply w-full;
+
+      color: #e74c3c;
+
+      &__sign {
+        color: #e74c3c;
       }
     }
   }
