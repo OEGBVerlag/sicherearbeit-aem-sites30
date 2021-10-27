@@ -39,7 +39,7 @@
     }
 
     &__error {
-      @apply w-full;
+      @apply inline-block w-full pl-2 mb-4 font-bold;
 
       color: #e74c3c;
 
