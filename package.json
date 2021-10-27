@@ -12,7 +12,7 @@
         "live": "npm-run-all -p compile proxy"
     },
     "devDependencies": {
-        "@adobe/aem-site-theme-builder": "5.1.1",
+        "@adobe/aem-site-theme-builder": "5.1.2",
         "@babel/core": "^7.13.10",
         "@babel/plugin-proposal-class-properties": "^7.13.0",
         "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
