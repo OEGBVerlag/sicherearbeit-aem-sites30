@@ -21,16 +21,18 @@
   }
 
   .ex-linklist_elements {
-    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 list-none;
-
-    margin-left: 1.1rem;
+    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 ml-0 list-none;
 
     @screen md {
       margin-left: 3.5rem;
     }
 
     .ex-linklist_element {
-      @apply flex items-center justify-start flex-initial w-full px-4 py-2 m-0;
+      @apply flex items-center justify-start flex-initial w-full py-2 pl-12 m-0;
+
+      @screen md {
+        @apply px-4;
+      }
 
       a {
         @apply text-gray-1;

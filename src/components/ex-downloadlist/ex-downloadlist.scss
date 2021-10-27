@@ -9,7 +9,11 @@
     @apply mt-0;
 
     &_item {
-      @apply px-4 py-2;
+      @apply py-2 pl-12;
+
+      @screen sm {
+        @apply px-4;
+      }
     }
   }
 
@@ -43,9 +47,8 @@
   }
 
   .downloadlist__elements {
-    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 list-none;
+    @apply flex flex-col pb-0 pl-0 mt-4 mb-0 ml-0 list-none;
 
-    margin-left: 1.1rem;
     @screen md {
       margin-left: 3.5rem;
     }
