@@ -160,7 +160,7 @@ $itemSpacing: 30px;
       @apply flex flex-row-reverse justify-end my-2 text-xs leading-tight;
 
       & > div:first-child {
-        @apply flex-shrink-0;
+        @apply self-center flex-shrink-0;
       }
     }
 
