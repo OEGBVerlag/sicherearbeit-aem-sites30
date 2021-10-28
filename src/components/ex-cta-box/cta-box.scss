@@ -86,11 +86,11 @@
     }
 
     .cta__title {
-      @apply font-headline text-primary text-xl font-light;
+      @apply text-primary text-xl font-light;
     }
 
     .cta__text {
-      @apply font-menu text-default flex-grow font-light text-black;
+      @apply text-default flex-grow font-light text-black;
     }
 
     .cta__button {

@@ -12,9 +12,7 @@
   }
 
   &_item {
-    @apply flex flex-col w-full p-4;
-
-    background: #f5f8fa;
+    @apply bg-gray-4 flex flex-col w-full p-4;
   }
 
   &_image {
@@ -30,7 +28,7 @@
   }
 
   &_title {
-    @apply font-body text-default text-gray-1 flex items-center justify-start flex-initial m-0 font-normal leading-5 underline;
+    @apply text-default text-gray-1 flex items-center justify-start flex-initial m-0 font-normal leading-5 underline;
     &:hover {
       @apply text-primary;
     }

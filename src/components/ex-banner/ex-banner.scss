@@ -5,7 +5,7 @@
     @apply w-full mb-10 text-center bg-center bg-no-repeat bg-cover;
 
     &__text {
-      @apply font-headline text-m flex flex-col items-center justify-center w-full mx-auto leading-none text-left text-white;
+      @apply text-m flex flex-col items-center justify-center w-full mx-auto leading-none text-left text-white;
 
       text-shadow: 0 2px 25px #000000;
       height: 250px;
@@ -20,7 +20,7 @@
       > *,
       h1,
       h2 {
-        @apply font-headline text-m p-0 m-0 font-normal leading-none text-left text-white;
+        @apply text-m p-0 m-0 leading-none text-left text-white;
 
         width: 80%;
         @screen sm {

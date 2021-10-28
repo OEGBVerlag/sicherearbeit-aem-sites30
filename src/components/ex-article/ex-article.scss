@@ -9,6 +9,10 @@
     @apply text-black;
   }
 
+  .cmp-image {
+    @apply mt-3;
+  }
+
   &__elements {
     @screen md {
       @apply p-0 m-0;
@@ -19,12 +23,10 @@
     h4,
     h5,
     h6 {
-      @apply text-primary pt-3 font-semibold leading-8;
-      scroll-margin-top: 100px;
+      @apply text-primary font-semibold leading-8;
 
-      @screen md {
-        @apply pt-8;
-      }
+      scroll-margin-top: 100px;
+      padding-top: 36px;
     }
 
     h2 {
@@ -88,7 +90,7 @@
 
       &--subtitle,
       &--previewText {
-        @apply font-body py-4;
+        @apply py-4;
 
         p:first-child {
           @apply mt-0;
@@ -168,8 +170,13 @@
   }
 
   .quote,
-  .cmp-image,
   table {
     @apply my-component-spacing;
+  }
+
+  .image {
+    .cmp-image {
+      @apply mt-3;
+    }
   }
 }
