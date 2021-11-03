@@ -78,14 +78,22 @@ module.exports = {
        */
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack',
+        use: ['@svgr/webpack'],
+        issuer: /\.tsx?$/,
+      },
+      {
+        test: /\.svg$/,
+        issuer: /\.scss?$/,
+        use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              name: '[path][name].[ext]',
-              publicPath: '../',
+                  name: '[path][name].[ext]',
+                  publicPath: '../',
+                  limit: 8192,
             }
-          }],
+          },
+        ],
       },
       {
         test: /\.scss$/,
