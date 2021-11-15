@@ -1,0 +1,103 @@
+.ex-live-search-results {
+  @apply overscroll-contain absolute hidden overflow-y-auto bg-white;
+
+  box-shadow: 0px 3px 45px #0000002c;
+  max-height: calc(100vh - 200px);
+  top: 100%;
+  width: 600px;
+
+  ul.ex-live-search-results__list {
+    @apply ml-0;
+  }
+
+  .ex-search-results-item {
+    @apply block clear-both px-5 pt-4 mt-0 overflow-hidden cursor-pointer;
+
+    &__media {
+      @apply float-right ml-1;
+
+      max-width: 150px;
+    }
+
+    &__topic {
+      @apply tracking-default text-xxs flex items-center mt-0 mb-1 font-light leading-tight text-black uppercase;
+
+      &:before {
+        @apply inline-block mr-1;
+
+        content: '\25BA';
+      }
+    }
+
+    &__info {
+      @apply float-none;
+
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+
+    &__title {
+      @apply font-headline text-s mb-2 font-bold leading-4;
+    }
+
+    &__preview-text {
+      @apply text-gray-2 text-xs leading-4;
+    }
+
+    &--active {
+      @apply bg-gray-2;
+
+      .ex-search-results-item__preview-text {
+        @apply text-primary;
+      }
+    }
+  }
+
+  &--show {
+    @screen sm {
+      @apply block;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    @apply w-2 h-1;
+  }
+
+  &::-webkit-scrollbar-button {
+    @apply w-0 h-0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gray-2 border-none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-2 border-none;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    @apply bg-gray-2 border-none;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-white border-none;
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    @apply bg-white border-none;
+  }
+
+  &::-webkit-scrollbar-track:active {
+    @apply bg-white border-none;
+  }
+
+  &::-webkit-scrollbar-corner {
+    @apply bg-white border-none;
+  }
+}
