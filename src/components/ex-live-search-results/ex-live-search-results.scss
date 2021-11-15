@@ -21,6 +21,12 @@
 
     &__topic {
       @apply tracking-default text-xxs flex items-center mt-0 mb-1 font-light leading-tight text-black uppercase;
+
+      &:before {
+        @apply inline-block mr-1;
+
+        content: '\25BA';
+      }
     }
 
     &__info {
