@@ -80,7 +80,7 @@
     }
 
     &__title {
-      @apply text-primary text-l inline-block pb-2 font-semibold no-underline;
+      @apply text-primary text-l inline-block pb-2 font-semibold underline;
 
       &:hover {
         @apply text-interactive-state-hover-link;
