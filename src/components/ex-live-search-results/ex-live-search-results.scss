@@ -14,7 +14,7 @@
     @apply block clear-both px-5 pt-4 mt-0 overflow-hidden cursor-pointer;
 
     &__media {
-      @apply float-right;
+      @apply float-right ml-1;
 
       max-width: 150px;
     }
