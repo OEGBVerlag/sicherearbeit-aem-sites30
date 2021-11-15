@@ -143,7 +143,7 @@ $itemSpacing: 30px;
     }
 
     &__title {
-      @apply text-primary text-l my-2 mb-2 font-bold leading-tight break-words;
+      @apply text-primary text-l my-2 mb-2 font-bold leading-tight underline break-words;
 
       hyphens: auto;
 
