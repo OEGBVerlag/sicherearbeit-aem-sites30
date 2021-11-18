@@ -11,7 +11,7 @@
   }
 
   .ex-search-results-item {
-    @apply block clear-both px-5 pt-4 mt-0 overflow-hidden cursor-pointer;
+    @apply block clear-both px-5 py-4 mt-0 overflow-hidden cursor-pointer;
 
     &__media {
       @apply float-right ml-1;
@@ -47,14 +47,18 @@
     }
 
     &__preview-text {
-      @apply text-gray-2 text-xs leading-4;
+      @apply text-xs leading-4 text-black;
     }
 
     &--active {
-      @apply bg-gray-2;
+      @apply bg-gray-3;
+
+      .ex-search-results-item__link {
+        @apply text-black;
+      }
 
       .ex-search-results-item__preview-text {
-        @apply text-primary;
+        @apply text-black;
       }
     }
   }
