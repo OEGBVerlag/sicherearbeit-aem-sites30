@@ -53,8 +53,12 @@
     &--active {
       @apply bg-gray-3;
 
+      .ex-search-results-item__link {
+        @apply text-black;
+      }
+
       .ex-search-results-item__preview-text {
-        @apply text-primary;
+        @apply text-black;
       }
     }
   }
