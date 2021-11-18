@@ -23,7 +23,10 @@
   }
 
   &__input {
-    @apply text-s bg-background border-primary w-full h-8 px-3 mt-0 mb-0 border-2 border-solid outline-none;
+    @apply text-s bg-background border-primary w-full h-8 px-3 mt-0 mb-0 border-2 border-solid rounded-l outline-none;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 
     &--hidden {
       @apply w-0;
