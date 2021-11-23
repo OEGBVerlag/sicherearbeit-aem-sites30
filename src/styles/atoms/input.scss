@@ -1,9 +1,10 @@
 input,
-select {
-  @apply bg-gray-4 border-gray-4 w-full p-2 mt-1 mb-3 text-black border outline-none;
+select,
+textarea {
+  @apply bg-gray-4 border-gray-2 w-full p-2 mt-1 mb-3 text-black border outline-none;
 
   &[type='submit'] {
-    @apply bg-primary text-white cursor-pointer;
+    @apply bg-primary text-white border-none cursor-pointer;
 
     &:hover {
       @apply bg-interactive-state-hover-button;
@@ -21,4 +22,8 @@ select {
   &:focus {
     @apply border-primary;
   }
+}
+
+textarea {
+  resize: none;
 }
